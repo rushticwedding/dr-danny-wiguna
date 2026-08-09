@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>dr. Danny Wiguna, Sp.OG — Dokter Kandungan Yogyakarta</title>
-<meta name="description" content="dr. Danny Wiguna, Sp.OG — Dokter Spesialis Obstetri dan Ginekologi di Siloam Hospitals Yogyakarta. Pendampingan program hamil, kehamilan, persalinan, dan kesehatan reproduksi perempuan.">
+<meta name="description" content="dr. Danny Wiguna, Sp.OG — Dokter Spesialis Obstetri dan Ginekologi di Siloam Hospitals Yogyakarta. Konsultasi ingin hamil berbasis gizi, program inseminasi, USG transvaginal, histeroskopi, serta pendampingan kehamilan dan persalinan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Karla:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -196,6 +196,49 @@ section{padding:4.5rem 0}
 .contact .btn-primary{background:#fff;color:var(--sage-deep)}
 .contact .btn-primary:hover{background:#EDF3EF}
 
+/* ---------- KONSULTASI INGIN HAMIL ---------- */
+.promil{background:var(--white)}
+.promil-lead{max-width:var(--measure)}
+.promil-lead p{color:var(--ink-soft)}
+.stat-band{
+  display:grid;gap:1.5rem;margin:2.6rem 0;padding:1.8rem;
+  background:var(--paper);border-radius:var(--r);border:1px solid var(--line)
+}
+@media(min-width:760px){.stat-band{grid-template-columns:repeat(2,1fr);gap:2.5rem}}
+.stat b{
+  display:block;font-family:Fraunces,serif;font-size:clamp(2rem,5vw,2.8rem);
+  color:var(--rose);line-height:1;margin-bottom:.5rem
+}
+.stat p{font-size:.94rem;color:var(--ink-soft);margin:0;max-width:42ch}
+.pillar{
+  border-left:3px solid var(--sage);padding:.2rem 0 .2rem 1.3rem;margin:2.6rem 0;
+  max-width:var(--measure)
+}
+.pillar h3{font-size:1.3rem;margin-bottom:.6rem}
+.pillar p{color:var(--ink-soft);margin-bottom:.7rem}
+.risk-title{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
+  color:var(--sage-deep);margin:2.4rem 0 1rem}
+.risk-list{
+  display:grid;gap:.55rem .9rem;list-style:none;padding:0;margin:0;font-size:.93rem;
+  color:var(--ink-soft)
+}
+@media(min-width:640px){.risk-list{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.risk-list{grid-template-columns:repeat(3,1fr)}}
+.risk-list li{padding-left:1.1rem;position:relative}
+.risk-list li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;
+  border-radius:50%;background:var(--sage)}
+.tool-grid{display:grid;gap:1rem;margin-top:1.4rem}
+@media(min-width:760px){.tool-grid{grid-template-columns:repeat(3,1fr)}}
+.tool{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:1.3rem}
+.tool h4{font-family:Fraunces,serif;font-weight:600;font-size:1.02rem;margin:0 0 .35rem}
+.tool p{font-size:.89rem;color:var(--ink-soft);margin:0}
+.honest{
+  margin-top:2.4rem;background:var(--paper);border-radius:var(--r);
+  padding:1.4rem 1.6rem;border:1px solid var(--line);max-width:var(--measure)
+}
+.honest p{margin:0;font-size:.94rem;color:var(--ink-soft)}
+.honest b{color:var(--ink)}
+
 footer{background:var(--ink);color:#8FA49B;font-size:.85rem;padding:2.4rem 0}
 footer a{color:#B9C8C0}
 
@@ -221,6 +264,7 @@ footer a{color:#B9C8C0}
   <div class="wrap nav-in">
     <a class="brand" href="#">dr. Danny Wiguna<span>, Sp.OG</span></a>
     <div class="nav-links">
+      <a href="#ingin-hamil">Konsultasi ingin hamil</a>
       <a href="#perjalanan">Perjalanan kehamilan</a>
       <a href="#layanan">Layanan</a>
       <a href="#edukasi">Edukasi publik</a>
@@ -238,11 +282,11 @@ footer a{color:#B9C8C0}
   <div class="wrap hero-in">
     <div>
       <p class="eyebrow">Obstetri &amp; Ginekologi — Yogyakarta</p>
-      <h1>Kehamilan itu perjalanan panjang. Anda tidak perlu menempuhnya <em>sendirian</em>.</h1>
-      <p class="lead">Pendampingan dari merencanakan kehamilan, tiap trimester, sampai masa pemulihan setelah melahirkan — dengan penjelasan yang bisa Anda pahami, bukan istilah medis yang membingungkan.</p>
+      <h1>Untuk yang sedang menyiapkan diri, dan yang sudah lama <em>menunggu</em>.</h1>
+      <p class="lead">Konsultasi ingin hamil dengan penelusuran faktor risiko dan penguatan gizi sebagai fondasi — dilanjutkan pendampingan kehamilan sampai masa pemulihan setelah melahirkan.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://wa.me/6281227911968?text=Halo%20Dokter%2C%20saya%20ingin%20konsultasi%20kandungan." target="_blank" rel="noopener">Konsultasi lewat WhatsApp</a>
-        <a class="btn btn-ghost" href="#jadwal">Lihat jadwal praktik</a>
+        <a class="btn btn-primary" href="https://wa.me/6281227911968?text=Halo%20Dokter%2C%20saya%20ingin%20konsultasi%20program%20hamil." target="_blank" rel="noopener">Konsultasi lewat WhatsApp</a>
+        <a class="btn btn-ghost" href="#ingin-hamil">Konsultasi ingin hamil</a>
       </div>
     </div>
     <div class="id-card">
@@ -266,6 +310,88 @@ footer a{color:#B9C8C0}
     <div class="cred"><b>Univ. Sam Ratulangi</b><span>Pendidikan spesialis</span></div>
   </div>
 </div>
+
+<!-- KONSULTASI INGIN HAMIL -->
+<section class="promil" id="ingin-hamil">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Fokus utama praktik</p>
+      <h2>Konsultasi Ingin Hamil</h2>
+      <p>Punya anak kini menjadi kebutuhan yang serius bagi banyak pasangan menikah. Sayangnya, kesulitan hamil adalah masalah yang meningkat hampir di seluruh dunia — dan jawabannya sering tidak sesederhana yang diharapkan.</p>
+    </div>
+
+    <div class="promil-lead">
+      <p>Teknologi kehamilan berbantu seperti inseminasi dan bayi tabung memang terus berkembang. Tetapi biayanya belum terjangkau oleh banyak pasangan, dan angka keberhasilannya berkisar 20–30 persen karena dipengaruhi banyak faktor sekaligus.</p>
+    </div>
+
+    <div class="stat-band">
+      <div class="stat">
+        <b>30–50%</b>
+        <p>Kasus sulit hamil yang tidak diketahui penyebabnya (<i>unexplained infertility</i>). Rentangnya lebar karena sangat bergantung pada selengkap apa pemeriksaan dilakukan.</p>
+      </div>
+      <div class="stat">
+        <b>20–30%</b>
+        <p>Kisaran angka keberhasilan program kehamilan berbantu per siklus — bukan jaminan, dan dipengaruhi usia serta kondisi masing-masing pasangan.</p>
+      </div>
+    </div>
+
+    <div class="promil-lead">
+      <p>Sampai hari ini para ahli masih berlomba mengecilkan angka kasus tanpa sebab itu. Isu daya terima dinding rahim (<i>endometrial receptivity</i>), pengaruh zat oksidatif, peradangan jaringan, dan mikroplastik sudah dipublikasikan luas — di samping faktor klasik yang sudah lama dikenal.</p>
+    </div>
+
+    <p class="risk-title">Faktor yang ditelusuri dalam konsultasi</p>
+    <ul class="risk-list">
+      <li>Berat badan dan status gizi</li>
+      <li>Merokok dan minuman beralkohol</li>
+      <li>Penyakit menular seksual</li>
+      <li>Siklus haid dan gangguannya</li>
+      <li>Kelainan bawaan bentuk rahim</li>
+      <li>Paparan polutan dan mikroplastik</li>
+      <li>Stres fisik maupun psikis</li>
+      <li>Penjadwalan hubungan suami istri</li>
+      <li>Kualitas dan jumlah sperma</li>
+      <li>Kepatuhan jadwal USG dan obat induksi ovulasi</li>
+      <li>Penyakit penyerta pada kedua pasangan</li>
+      <li>Riwayat program hamil sebelumnya</li>
+    </ul>
+
+    <div class="pillar">
+      <h3>Mengapa gizi selalu menjadi titik awal</h3>
+      <p>Semua masalah sebaiknya dikembalikan ke akarnya: tubuh manusia bertumbuh sejak dalam kandungan, melewati masa dewasa, kehamilan, sampai menopause dan andropause. Setiap sel yang berkembang dan bertambah banyak pada perempuan maupun laki-laki membutuhkan bahan baku yang sama, dan bahan baku itu adalah gizi.</p>
+      <p>Karena itu, dalam setiap konsultasi persiapan pernikahan, persiapan hamil, maupun proses kehamilan dan persalinan, dr. Danny selalu bertumpu pada pemenuhan gizi yang optimal — dari sumber yang mudah didapat, bukan yang mahal dan sulit dicari.</p>
+    </div>
+
+    <p class="risk-title">Alat bantu penelusuran</p>
+    <div class="tool-grid">
+      <div class="tool">
+        <h4>USG transvaginal</h4>
+        <p>Melihat kondisi rahim dan indung telur secara lebih jelas dibanding USG perut.</p>
+      </div>
+      <div class="tool">
+        <h4>Histeroskopi diagnostik</h4>
+        <p><i>Office hysteroscopy</i> — melihat langsung rongga rahim dari dalam untuk menemukan kelainan yang tidak terbaca pemeriksaan lain.</p>
+      </div>
+      <div class="tool">
+        <h4>Pemeriksaan laboratorium</h4>
+        <p>Hormon, analisis sperma, dan penanda lain sesuai kebutuhan masing-masing pasangan.</p>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <h3>Program inseminasi</h3>
+      <p>Program inseminasi sudah berjalan sejak satu tahun terakhir, dan dr. Danny adalah salah satu pelaksananya. Inseminasi menjadi jembatan ketika program hamil alami sudah dicoba namun belum berhasil.</p>
+      <p>Pilihan ini biasanya dipertimbangkan bila disertai kelainan sperma ringan pada jumlah atau gerakannya, haid yang tidak teratur, vaginismus yang penyebabnya sudah diperbaiki, atau jadwal berhubungan yang sulit diatur karena berbagai alasan.</p>
+    </div>
+
+    <div class="honest">
+      <p><b>Perlu dikatakan terus terang:</b> tidak ada program yang bisa menjanjikan kehamilan. Yang bisa dilakukan adalah menelusuri faktor risiko satu per satu, memperbaiki yang masih bisa diperbaiki, dan memilih langkah lanjutan yang paling masuk akal untuk kondisi Anda berdua. Penguatan gizi adalah fondasi, bukan pengganti pemeriksaan medis.</p>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://wa.me/6281227911968?text=Halo%20Dokter%2C%20saya%20dan%20pasangan%20ingin%20konsultasi%20program%20hamil." target="_blank" rel="noopener">Mulai konsultasi ingin hamil</a>
+    </div>
+  </div>
+</section>
 
 <!-- PERJALANAN -->
 <section id="perjalanan">
