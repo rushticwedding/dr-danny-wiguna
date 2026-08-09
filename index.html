@@ -95,7 +95,7 @@ nav{position:sticky;top:0;z-index:40;background:rgba(240,242,239,.9);backdrop-fi
 .hero .eyebrow::before{background:var(--sage)}
 .id-card{background:rgba(233,239,235,.06);border:1px solid rgba(233,239,235,.18);
   border-radius:var(--r);padding:1.1rem;backdrop-filter:blur(6px)}
-.id-card img{border-radius:12px;width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 30%}
+.id-card img{border-radius:12px;width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 25%}
 .id-card h2{font-size:1.3rem;color:#F3F7F4;margin-top:1.1rem}
 .id-card .role{font-size:.88rem;color:var(--sage);margin:.3rem 0 0}
 
@@ -245,6 +245,21 @@ section{padding:4.5rem 0}
 .daftar p{font-size:.88rem;color:var(--ink-soft);margin:0}
 .updated{font-size:.78rem;color:var(--ink-soft);margin-top:1.2rem}
 
+
+/* ---------- POSTER JADWAL RESMI ---------- */
+.poster-head{margin:3rem 0 1.2rem;max-width:var(--measure)}
+.poster-head h3{font-size:1.25rem;margin-bottom:.4rem}
+.poster-head p{font-size:.9rem;color:var(--ink-soft);margin:0}
+.posters{display:grid;gap:1rem;grid-template-columns:repeat(2,1fr)}
+@media(min-width:900px){.posters{grid-template-columns:repeat(5,1fr)}}
+.poster{margin:0;background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden;
+  transition:transform .2s ease,box-shadow .2s ease}
+.poster:hover{transform:translateY(-3px);box-shadow:0 14px 30px -20px rgba(15,36,48,.6)}
+.poster a{display:block}
+.poster img{width:100%;height:auto}
+.poster figcaption{font-size:.76rem;color:var(--ink-soft);padding:.6rem .75rem .75rem;line-height:1.35}
+.poster figcaption b{display:block;color:var(--ink);font-weight:700;font-size:.8rem;margin-bottom:.1rem}
+
 /* ---------- GRUP MENATAP TATAP ---------- */
 .grup{background:var(--paper-2)}
 .grup-in{display:grid;gap:1.6rem}
@@ -305,7 +320,7 @@ footer .f-links{display:flex;gap:1.4rem;flex-wrap:wrap;margin:0 0 .9rem}
       </div>
     </div>
     <div class="id-card">
-      <img src="img/portrait.jpg" alt="Potret dr. Danny Wiguna, Sp.OG" width="1000" height="1000">
+      <img src="img/portrait.jpg" alt="Potret dr. Danny Wiguna, Sp.OG" width="1100" height="1100">
       <h2>dr. Danny Wiguna, Sp.OG</h2>
       <p class="role">Dokter Spesialis Obstetri &amp; Ginekologi<br>Siloam Hospitals Yogyakarta</p>
     </div>
@@ -561,6 +576,18 @@ footer .f-links{display:flex;gap:1.4rem;flex-wrap:wrap;margin:0 0 .9rem}
         </div>
         <p class="sched-note">Datang sesuai ketentuan dan tanggal kontrol. Bila ada keadaan darurat sebelum tanggal kontrol, hubungi lebih dulu atau datang melalui IGD Siloam Hospitals Yogyakarta.</p>
       </div>
+    </div>
+
+    <div class="poster-head">
+      <h3>Poster jadwal resmi</h3>
+      <p>Versi resmi dari Siloam Hospitals Yogyakarta. Ketuk untuk memperbesar atau menyimpannya.</p>
+    </div>
+    <div class="posters">
+      <figure class="poster"><a href="img/jadwal-mandiri-1.jpg" target="_blank" rel="noopener"><img src="img/jadwal-mandiri-1.jpg" alt="Jadwal praktik dr. Danny Wiguna Sp.OG &mdash; Mandiri &amp; Asuransi Senin &ndash; Kamis" loading="lazy"></a><figcaption><b>Mandiri &amp; Asuransi</b>Senin &ndash; Kamis</figcaption></figure>
+      <figure class="poster"><a href="img/jadwal-mandiri-2.jpg" target="_blank" rel="noopener"><img src="img/jadwal-mandiri-2.jpg" alt="Jadwal praktik dr. Danny Wiguna Sp.OG &mdash; Mandiri &amp; Asuransi Jumat, Sabtu, Minggu" loading="lazy"></a><figcaption><b>Mandiri &amp; Asuransi</b>Jumat, Sabtu, Minggu</figcaption></figure>
+      <figure class="poster"><a href="img/jadwal-jkn-1.jpg" target="_blank" rel="noopener"><img src="img/jadwal-jkn-1.jpg" alt="Jadwal praktik dr. Danny Wiguna Sp.OG &mdash; JKN BPJS Senin &ndash; Kamis" loading="lazy"></a><figcaption><b>JKN BPJS</b>Senin &ndash; Kamis</figcaption></figure>
+      <figure class="poster"><a href="img/jadwal-jkn-2.jpg" target="_blank" rel="noopener"><img src="img/jadwal-jkn-2.jpg" alt="Jadwal praktik dr. Danny Wiguna Sp.OG &mdash; JKN BPJS Jumat &amp; Sabtu" loading="lazy"></a><figcaption><b>JKN BPJS</b>Jumat &amp; Sabtu</figcaption></figure>
+      <figure class="poster"><a href="img/cara-konsultasi.jpg" target="_blank" rel="noopener"><img src="img/cara-konsultasi.jpg" alt="Jadwal praktik dr. Danny Wiguna Sp.OG &mdash; Cara konsultasi Alur pendaftaran" loading="lazy"></a><figcaption><b>Cara konsultasi</b>Alur pendaftaran</figcaption></figure>
     </div>
 
     <div class="daftar">
