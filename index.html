@@ -3,266 +3,230 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>dr. Danny Wiguna, Sp.OG — Dokter Kandungan Yogyakarta</title>
+<title>dr. Danny Wiguna, Sp.OG — Konsultasi Ingin Hamil &amp; Kandungan, Yogyakarta</title>
 <meta name="description" content="dr. Danny Wiguna, Sp.OG — Dokter Spesialis Obstetri dan Ginekologi di Siloam Hospitals Yogyakarta. Konsultasi ingin hamil berbasis gizi, program inseminasi, USG transvaginal, histeroskopi, serta pendampingan kehamilan dan persalinan.">
+<meta property="og:title" content="dr. Danny Wiguna, Sp.OG — Dokter Kandungan Yogyakarta">
+<meta property="og:description" content="Konsultasi ingin hamil, program inseminasi, dan pendampingan kehamilan di Yogyakarta.">
+<meta property="og:image" content="img/portrait.jpg">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Karla:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#12232E;          /* navy layar USG */
-  --ink-soft:#2C4553;
-  --paper:#EFF1EE;        /* bone dingin */
-  --paper-warm:#E4E8E2;
-  --sage:#7B9A86;         /* hijau tenang */
-  --sage-deep:#4E6B5A;
-  --rose:#B9636F;         /* rose tua, bukan pastel */
-  --line:#C6CEC7;
-  --white:#FFFFFF;
-  --r:14px;
-  --measure:64ch;
+  --ink:#0F2430;
+  --ink-2:#1B3543;
+  --ink-soft:#3A5666;
+  --paper:#F0F2EF;
+  --paper-2:#E3E8E3;
+  --sage:#7FA189;
+  --sage-deep:#4A6B58;
+  --rose:#B25F6B;
+  --rose-deep:#98505B;
+  --line:#C8D0C9;
+  --white:#fff;
+  --r:16px;
+  --measure:66ch;
+  --shadow:0 18px 40px -22px rgba(15,36,48,.45);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  margin:0;background:var(--paper);color:var(--ink);
-  font-family:Karla,system-ui,sans-serif;font-size:17px;line-height:1.62;
-  -webkit-font-smoothing:antialiased;
-}
-h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.12;margin:0}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Karla,system-ui,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.13;margin:0}
 p{margin:0 0 1em}
-a{color:inherit}
-.wrap{width:min(1120px,92vw);margin-inline:auto}
-.eyebrow{
-  font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
-  font-weight:700;color:var(--sage-deep);margin:0 0 1rem
-}
+img{max-width:100%;display:block}
+.wrap{width:min(1140px,92vw);margin-inline:auto}
+.eyebrow{font-size:.71rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;
+  color:var(--sage-deep);margin:0 0 1rem;display:flex;align-items:center;gap:.7rem}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--sage);flex:none}
 .skip{position:absolute;left:-9999px}
-.skip:focus{left:1rem;top:1rem;background:var(--white);padding:.6rem 1rem;border-radius:8px;z-index:99}
-a:focus-visible,button:focus-visible{outline:3px solid var(--rose);outline-offset:3px;border-radius:6px}
+.skip:focus{left:1rem;top:1rem;background:#fff;padding:.6rem 1rem;border-radius:8px;z-index:99}
+a:focus-visible,button:focus-visible{outline:3px solid var(--rose);outline-offset:3px;border-radius:8px}
 
-/* ---------- NAV ---------- */
-nav{position:sticky;top:0;z-index:40;background:rgba(239,241,238,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 0}
-.brand{font-family:Fraunces,serif;font-size:1.05rem;letter-spacing:.01em;text-decoration:none}
-.brand span{color:var(--sage-deep)}
-.nav-links{display:none;gap:1.6rem;font-size:.9rem}
+/* NAV */
+nav{position:sticky;top:0;z-index:40;background:rgba(240,242,239,.9);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 0}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.mono{width:38px;height:38px;border-radius:50%;background:var(--ink);color:#EAF0EC;flex:none;
+  display:grid;place-items:center;font-family:Fraunces,serif;font-size:.95rem;letter-spacing:.02em}
+.brand-txt{font-family:Fraunces,serif;font-size:1rem;line-height:1.15}
+.brand-txt small{display:block;font-family:Karla,sans-serif;font-size:.68rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--sage-deep);margin-top:.15rem}
+.nav-links{display:none;gap:1.5rem;font-size:.88rem}
 .nav-links a{text-decoration:none;color:var(--ink-soft)}
 .nav-links a:hover{color:var(--rose)}
-@media(min-width:900px){.nav-links{display:flex}}
+@media(min-width:980px){.nav-links{display:flex}}
 
-/* ---------- HERO: layar ultrasonografi ---------- */
-.hero{position:relative;background:var(--ink);color:#E8EEEA;overflow:hidden;padding:5.5rem 0 4.5rem}
-.sweep{
-  position:absolute;inset:0;pointer-events:none;
-  background:
-    conic-gradient(from 200deg at 50% -10%,
-      rgba(123,154,134,0) 0deg,
-      rgba(123,154,134,.30) 18deg,
-      rgba(185,99,111,.16) 30deg,
-      rgba(123,154,134,0) 46deg);
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:50px;
+  padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.94rem;
+  transition:transform .18s ease,background .18s ease,box-shadow .18s ease}
+.btn svg{width:19px;height:19px;flex:none;fill:currentColor}
+.btn-wa{background:#25D366;color:#0B2E1B}
+.btn-wa:hover{background:#1FBA59;transform:translateY(-2px);box-shadow:0 10px 22px -12px rgba(37,211,102,.9)}
+.btn-primary{background:var(--rose);color:#fff}
+.btn-primary:hover{background:var(--rose-deep);transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(234,240,236,.38);color:#EAF0EC}
+.btn-ghost:hover{background:rgba(234,240,236,.1)}
+.btn-outline{border:1px solid var(--line);color:var(--ink);background:var(--white)}
+.btn-outline:hover{background:var(--paper-2)}
+.cta-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+
+/* HERO */
+.hero{position:relative;background:var(--ink);color:#E9EFEB;overflow:hidden;padding:4.5rem 0 4rem}
+.sweep{position:absolute;inset:0;pointer-events:none;
+  background:conic-gradient(from 200deg at 50% -10%,
+    rgba(127,161,137,0) 0deg,rgba(127,161,137,.30) 18deg,
+    rgba(178,95,107,.16) 30deg,rgba(127,161,137,0) 46deg);
   mask-image:radial-gradient(120% 90% at 50% 0%,#000 20%,transparent 78%);
   -webkit-mask-image:radial-gradient(120% 90% at 50% 0%,#000 20%,transparent 78%);
-  animation:sweep 9s ease-in-out infinite alternate;
-}
+  animation:sweep 10s ease-in-out infinite alternate}
 @keyframes sweep{from{transform:rotate(-9deg)}to{transform:rotate(9deg)}}
-.grid-lines{position:absolute;inset:0;opacity:.13;pointer-events:none;
-  background-image:linear-gradient(rgba(232,238,234,.35) 1px,transparent 1px);
-  background-size:100% 46px}
+.grid-lines{position:absolute;inset:0;opacity:.11;pointer-events:none;
+  background-image:linear-gradient(rgba(233,239,235,.35) 1px,transparent 1px);background-size:100% 46px}
 .hero-in{position:relative;display:grid;gap:2.5rem}
-@media(min-width:920px){.hero-in{grid-template-columns:1.15fr .85fr;align-items:center;gap:3.5rem}}
-.hero h1{font-size:clamp(2.1rem,5.6vw,3.5rem);color:#F2F6F3;max-width:18ch}
+@media(min-width:940px){.hero-in{grid-template-columns:1.1fr .9fr;align-items:center;gap:3.5rem}}
+.hero h1{font-size:clamp(2.05rem,5.4vw,3.4rem);color:#F3F7F4;max-width:19ch}
 .hero h1 em{font-style:italic;color:var(--sage)}
-.hero p.lead{color:#B9C8C0;max-width:44ch;margin-top:1.4rem}
+.hero .lead{color:#B7C7BE;max-width:45ch;margin-top:1.3rem}
 .hero .eyebrow{color:var(--sage)}
-.cta-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
-.btn{
-  display:inline-flex;align-items:center;gap:.55rem;min-height:48px;
-  padding:.85rem 1.5rem;border-radius:999px;text-decoration:none;
-  font-weight:700;font-size:.95rem;transition:transform .18s ease,background .18s ease;
-}
-.btn-primary{background:var(--rose);color:#fff}
-.btn-primary:hover{background:#a5555f;transform:translateY(-2px)}
-.btn-ghost{border:1px solid rgba(232,238,234,.35);color:#E8EEEA}
-.btn-ghost:hover{background:rgba(232,238,234,.1)}
+.hero .eyebrow::before{background:var(--sage)}
+.id-card{background:rgba(233,239,235,.06);border:1px solid rgba(233,239,235,.18);
+  border-radius:var(--r);padding:1.1rem;backdrop-filter:blur(6px)}
+.id-card img{border-radius:12px;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%}
+.id-card h2{font-size:1.3rem;color:#F3F7F4;margin-top:1.1rem}
+.id-card .role{font-size:.88rem;color:var(--sage);margin:.3rem 0 0}
 
-/* kartu identitas dokter */
-.id-card{
-  background:rgba(232,238,234,.06);border:1px solid rgba(232,238,234,.18);
-  border-radius:var(--r);padding:1.4rem;backdrop-filter:blur(6px)
-}
-.portrait{
-  aspect-ratio:4/5;border-radius:10px;background:rgba(232,238,234,.07);
-  border:1px dashed rgba(232,238,234,.3);display:grid;place-items:center;text-align:center;
-  color:#95A9A0;font-size:.8rem;padding:1rem;line-height:1.4
-}
-.id-card h2{font-size:1.35rem;color:#F2F6F3;margin-top:1.1rem}
-.id-card .role{font-size:.9rem;color:var(--sage);margin:.3rem 0 0}
+/* WAVE */
+.wave{display:block;width:100%;height:50px}
+.wave path{fill:none;stroke:var(--sage);stroke-width:1.5;opacity:.75}
 
-/* ---------- waveform pemisah ---------- */
-.wave{display:block;width:100%;height:52px}
-.wave path{fill:none;stroke:var(--sage);stroke-width:1.5;opacity:.7}
+/* CREDS */
+.creds{background:var(--paper-2);padding:2.1rem 0}
+.creds-grid{display:grid;gap:1.3rem;grid-template-columns:repeat(2,1fr)}
+@media(min-width:880px){.creds-grid{grid-template-columns:repeat(4,1fr)}}
+.cred b{display:block;font-family:Fraunces,serif;font-size:1.03rem;font-weight:600}
+.cred span{font-size:.84rem;color:var(--ink-soft)}
 
-/* ---------- KREDENSIAL ---------- */
-.creds{background:var(--paper-warm);padding:2.2rem 0}
-.creds-grid{display:grid;gap:1.4rem;grid-template-columns:repeat(2,1fr)}
-@media(min-width:860px){.creds-grid{grid-template-columns:repeat(4,1fr)}}
-.cred b{display:block;font-family:Fraunces,serif;font-size:1.05rem;font-weight:600}
-.cred span{font-size:.85rem;color:var(--ink-soft)}
-
-/* ---------- SECTION ---------- */
 section{padding:4.5rem 0}
-.sec-head{max-width:var(--measure);margin-bottom:2.8rem}
-.sec-head h2{font-size:clamp(1.7rem,3.8vw,2.5rem)}
+.sec-head{max-width:var(--measure);margin-bottom:2.6rem}
+.sec-head h2{font-size:clamp(1.7rem,3.9vw,2.5rem)}
 .sec-head p{color:var(--ink-soft);margin-top:.9rem}
 
-/* ---------- TIMELINE TRIMESTER ---------- */
-.journey{position:relative;display:grid;gap:0}
-.stage{
-  display:grid;grid-template-columns:auto 1fr;gap:1.3rem;
-  padding:1.6rem 0;border-top:1px solid var(--line)
-}
-.stage:last-child{border-bottom:1px solid var(--line)}
-.stage .num{
-  font-family:Fraunces,serif;font-size:.95rem;color:var(--sage-deep);
-  padding-top:.15rem;min-width:2.6rem;font-variant-numeric:tabular-nums
-}
-.stage h3{font-size:1.2rem;margin-bottom:.45rem}
-.stage p{color:var(--ink-soft);margin:0;font-size:.96rem;max-width:58ch}
-@media(min-width:760px){
-  .stage{grid-template-columns:5.5rem 1fr 1fr;align-items:start;gap:2rem}
-  .stage p{margin:0}
-}
+/* PROMIL */
+.promil{background:var(--white)}
+.promil-lead{max-width:var(--measure)}
+.promil-lead p{color:var(--ink-soft)}
+.stat-band{display:grid;gap:1.5rem;margin:2.5rem 0;padding:1.8rem;background:var(--paper);
+  border-radius:var(--r);border:1px solid var(--line)}
+@media(min-width:760px){.stat-band{grid-template-columns:repeat(2,1fr);gap:2.5rem}}
+.stat b{display:block;font-family:Fraunces,serif;font-size:clamp(2rem,5vw,2.7rem);color:var(--rose);
+  line-height:1;margin-bottom:.5rem}
+.stat p{font-size:.93rem;color:var(--ink-soft);margin:0;max-width:42ch}
+.pillar{border-left:3px solid var(--sage);padding:.2rem 0 .2rem 1.3rem;margin:2.5rem 0;max-width:var(--measure)}
+.pillar h3{font-size:1.28rem;margin-bottom:.6rem}
+.pillar p{color:var(--ink-soft);margin-bottom:.7rem}
+.risk-title{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
+  color:var(--sage-deep);margin:2.3rem 0 1rem}
+.risk-list{display:grid;gap:.55rem .9rem;list-style:none;padding:0;margin:0;font-size:.92rem;color:var(--ink-soft)}
+@media(min-width:640px){.risk-list{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.risk-list{grid-template-columns:repeat(3,1fr)}}
+.risk-list li{padding-left:1.1rem;position:relative}
+.risk-list li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--sage)}
+.tool-grid{display:grid;gap:1rem;margin-top:1.3rem}
+@media(min-width:760px){.tool-grid{grid-template-columns:repeat(3,1fr)}}
+.tool{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:1.3rem}
+.tool h4{font-family:Fraunces,serif;font-weight:600;font-size:1rem;margin:0 0 .35rem}
+.tool p{font-size:.88rem;color:var(--ink-soft);margin:0}
+.honest{margin-top:2.3rem;background:var(--paper);border-radius:var(--r);padding:1.4rem 1.6rem;
+  border:1px solid var(--line);max-width:var(--measure)}
+.honest p{margin:0;font-size:.93rem;color:var(--ink-soft)}
+.honest b{color:var(--ink)}
 
-/* ---------- LAYANAN ---------- */
+/* JOURNEY */
+.stage{display:grid;grid-template-columns:auto 1fr;gap:1.3rem;padding:1.6rem 0;border-top:1px solid var(--line)}
+.stage:last-child{border-bottom:1px solid var(--line)}
+.stage .num{font-family:Fraunces,serif;font-size:.95rem;color:var(--sage-deep);padding-top:.15rem;
+  min-width:2.6rem;font-variant-numeric:tabular-nums}
+.stage h3{font-size:1.18rem;margin-bottom:.45rem}
+.stage p{color:var(--ink-soft);margin:0;font-size:.95rem;max-width:58ch}
+@media(min-width:760px){.stage{grid-template-columns:5.5rem 1fr 1fr;align-items:start;gap:2rem}.stage p{margin:0}}
+
+/* LAYANAN */
 .services{background:var(--white)}
 .svc-grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
 @media(min-width:700px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:1000px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
 .svc{background:var(--white);padding:1.6rem}
-.svc h3{font-size:1.08rem;margin-bottom:.4rem}
-.svc p{font-size:.92rem;color:var(--ink-soft);margin:0}
+.svc h3{font-size:1.05rem;margin-bottom:.4rem}
+.svc p{font-size:.9rem;color:var(--ink-soft);margin:0}
 
-/* ---------- EDUKASI PUBLIK ---------- */
-.talks{background:var(--ink);color:#E8EEEA}
-.talks .sec-head h2{color:#F2F6F3}
-.talks .sec-head p{color:#B9C8C0}
+/* EDUKASI */
+.talks{background:var(--ink);color:#E9EFEB}
+.talks .sec-head h2{color:#F3F7F4}
+.talks .sec-head p{color:#B7C7BE}
 .talks .eyebrow{color:var(--sage)}
-.photo-grid{display:grid;gap:1rem;grid-template-columns:repeat(2,1fr)}
-@media(min-width:820px){.photo-grid{grid-template-columns:repeat(4,1fr)}}
-.ph{
-  aspect-ratio:4/3;border-radius:10px;border:1px dashed rgba(232,238,234,.3);
-  background:rgba(232,238,234,.05);display:grid;place-items:center;
-  text-align:center;padding:.9rem;font-size:.76rem;color:#95A9A0;line-height:1.45
-}
-.ph.tall{aspect-ratio:3/4}
-.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:2.2rem 0 0}
-.chip{
-  font-size:.8rem;padding:.42rem .9rem;border-radius:999px;
-  border:1px solid rgba(232,238,234,.25);color:#C6D4CC
-}
+.talks .eyebrow::before{background:var(--sage)}
+.gal{display:grid;gap:1.1rem;grid-template-columns:repeat(2,1fr)}
+@media(min-width:900px){.gal{grid-template-columns:repeat(4,1fr)}}
+.shot{margin:0;border-radius:12px;overflow:hidden;background:rgba(233,239,235,.06);
+  border:1px solid rgba(233,239,235,.14)}
+.shot img{aspect-ratio:4/3;object-fit:cover;width:100%;transition:transform .5s ease}
+.shot:hover img{transform:scale(1.04)}
+.shot figcaption{font-size:.76rem;color:#A9BCB1;padding:.65rem .8rem .8rem;line-height:1.4}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:2rem 0 0}
+.chip{font-size:.79rem;padding:.4rem .9rem;border-radius:999px;border:1px solid rgba(233,239,235,.25);color:#C5D3CB}
 .talks-note{margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
 
-/* ---------- PODCAST ---------- */
-.podcast{background:var(--paper-warm)}
+/* PODCAST */
+.podcast{background:var(--paper-2)}
 .pod-in{display:grid;gap:2rem;align-items:center}
-@media(min-width:880px){.pod-in{grid-template-columns:1fr 1fr;gap:3rem}}
-.pod-art{
-  aspect-ratio:1;border-radius:var(--r);background:var(--ink);color:#E8EEEA;
-  display:grid;place-content:center;text-align:center;padding:2rem;position:relative;overflow:hidden
-}
-.pod-art .sweep{opacity:.9}
-.pod-art h3{font-size:clamp(1.6rem,4vw,2.2rem);color:#F2F6F3;position:relative}
-.pod-art span{position:relative;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
+@media(min-width:880px){.pod-in{grid-template-columns:.85fr 1.15fr;gap:3rem}}
+.pod-art{border-radius:var(--r);background:var(--ink);display:grid;place-items:center;
+  padding:2.2rem;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.pod-art img{position:relative;width:min(280px,72%);filter:drop-shadow(0 10px 22px rgba(0,0,0,.35))}
 
-/* ---------- JADWAL ---------- */
-.place{
-  background:var(--white);border:1px solid var(--line);border-radius:var(--r);
-  padding:1.8rem;display:grid;gap:1.2rem
-}
+/* JADWAL */
+.place{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:1.8rem;
+  display:grid;gap:1.2rem}
 @media(min-width:760px){.place{grid-template-columns:1.2fr 1fr;align-items:center}}
-.place h3{font-size:1.25rem;margin-bottom:.35rem}
-.place address{font-style:normal;color:var(--ink-soft);font-size:.94rem}
-.todo{
-  margin-top:1.4rem;border-left:3px solid var(--rose);background:#fff;
-  padding:.9rem 1.1rem;font-size:.88rem;color:var(--ink-soft);border-radius:0 8px 8px 0
-}
+.place h3{font-size:1.22rem;margin-bottom:.35rem}
+.place address{font-style:normal;color:var(--ink-soft);font-size:.93rem}
+.todo{margin-top:1.4rem;border-left:3px solid var(--rose);background:#fff;padding:.9rem 1.1rem;
+  font-size:.87rem;color:var(--ink-soft);border-radius:0 8px 8px 0}
 .todo b{color:var(--rose)}
 
-/* ---------- KONTAK ---------- */
+/* KONTAK */
 .contact{background:var(--sage-deep);color:#EDF3EF}
 .contact h2{color:#fff;font-size:clamp(1.8rem,4vw,2.6rem);max-width:16ch}
-.contact p{color:#D3E1D8;max-width:46ch}
-.contact .btn-primary{background:#fff;color:var(--sage-deep)}
-.contact .btn-primary:hover{background:#EDF3EF}
+.contact p{color:#D5E2DA;max-width:47ch}
 
-/* ---------- KONSULTASI INGIN HAMIL ---------- */
-.promil{background:var(--white)}
-.promil-lead{max-width:var(--measure)}
-.promil-lead p{color:var(--ink-soft)}
-.stat-band{
-  display:grid;gap:1.5rem;margin:2.6rem 0;padding:1.8rem;
-  background:var(--paper);border-radius:var(--r);border:1px solid var(--line)
-}
-@media(min-width:760px){.stat-band{grid-template-columns:repeat(2,1fr);gap:2.5rem}}
-.stat b{
-  display:block;font-family:Fraunces,serif;font-size:clamp(2rem,5vw,2.8rem);
-  color:var(--rose);line-height:1;margin-bottom:.5rem
-}
-.stat p{font-size:.94rem;color:var(--ink-soft);margin:0;max-width:42ch}
-.pillar{
-  border-left:3px solid var(--sage);padding:.2rem 0 .2rem 1.3rem;margin:2.6rem 0;
-  max-width:var(--measure)
-}
-.pillar h3{font-size:1.3rem;margin-bottom:.6rem}
-.pillar p{color:var(--ink-soft);margin-bottom:.7rem}
-.risk-title{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
-  color:var(--sage-deep);margin:2.4rem 0 1rem}
-.risk-list{
-  display:grid;gap:.55rem .9rem;list-style:none;padding:0;margin:0;font-size:.93rem;
-  color:var(--ink-soft)
-}
-@media(min-width:640px){.risk-list{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:1000px){.risk-list{grid-template-columns:repeat(3,1fr)}}
-.risk-list li{padding-left:1.1rem;position:relative}
-.risk-list li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;
-  border-radius:50%;background:var(--sage)}
-.tool-grid{display:grid;gap:1rem;margin-top:1.4rem}
-@media(min-width:760px){.tool-grid{grid-template-columns:repeat(3,1fr)}}
-.tool{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:1.3rem}
-.tool h4{font-family:Fraunces,serif;font-weight:600;font-size:1.02rem;margin:0 0 .35rem}
-.tool p{font-size:.89rem;color:var(--ink-soft);margin:0}
-.honest{
-  margin-top:2.4rem;background:var(--paper);border-radius:var(--r);
-  padding:1.4rem 1.6rem;border:1px solid var(--line);max-width:var(--measure)
-}
-.honest p{margin:0;font-size:.94rem;color:var(--ink-soft)}
-.honest b{color:var(--ink)}
+footer{background:var(--ink);color:#8DA398;font-size:.85rem;padding:2.4rem 0}
+footer a{color:#B7C7BE}
+footer .f-links{display:flex;gap:1.4rem;flex-wrap:wrap;margin:0 0 .9rem}
 
-footer{background:var(--ink);color:#8FA49B;font-size:.85rem;padding:2.4rem 0}
-footer a{color:#B9C8C0}
+.wa-float{position:fixed;right:1rem;bottom:1rem;z-index:50;display:inline-flex;align-items:center;
+  gap:.55rem;background:#25D366;color:#0B2E1B;text-decoration:none;font-weight:700;font-size:.9rem;
+  padding:.75rem 1.15rem;border-radius:999px;box-shadow:0 10px 26px rgba(15,36,48,.3);min-height:50px}
+.wa-float svg{width:20px;height:20px;fill:currentColor}
+.wa-float:hover{background:#1FBA59}
 
-/* ---------- WA melayang ---------- */
-.wa-float{
-  position:fixed;right:1rem;bottom:1rem;z-index:50;
-  display:inline-flex;align-items:center;gap:.55rem;
-  background:var(--rose);color:#fff;text-decoration:none;font-weight:700;font-size:.9rem;
-  padding:.8rem 1.2rem;border-radius:999px;box-shadow:0 8px 24px rgba(18,35,46,.25);
-  min-height:48px
-}
-.wa-float:hover{background:#a5555f}
-
-@media (prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important;scroll-behavior:auto}
-}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <a class="skip" href="#utama">Lompat ke konten utama</a>
 
+<svg style="display:none" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884a9.82 9.82 0 0 1 6.988 2.896 9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.945c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.882 11.882 0 0 0 5.683 1.448h.005c6.585 0 11.946-5.359 11.949-11.945a11.87 11.87 0 0 0-3.497-8.411"/></symbol></svg>
+
 <nav>
   <div class="wrap nav-in">
-    <a class="brand" href="#">dr. Danny Wiguna<span>, Sp.OG</span></a>
+    <a class="brand" href="#">
+      <span class="mono">DW</span>
+      <span class="brand-txt">dr. Danny Wiguna, Sp.OG<small>Obstetri &amp; Ginekologi</small></span>
+    </a>
     <div class="nav-links">
       <a href="#ingin-hamil">Konsultasi ingin hamil</a>
       <a href="#perjalanan">Perjalanan kehamilan</a>
@@ -275,7 +239,6 @@ footer a{color:#B9C8C0}
 
 <main id="utama">
 
-<!-- HERO -->
 <header class="hero">
   <div class="sweep" aria-hidden="true"></div>
   <div class="grid-lines" aria-hidden="true"></div>
@@ -285,12 +248,12 @@ footer a{color:#B9C8C0}
       <h1>Untuk yang sedang menyiapkan diri, dan yang sudah lama <em>menunggu</em>.</h1>
       <p class="lead">Konsultasi ingin hamil dengan penelusuran faktor risiko dan penguatan gizi sebagai fondasi — dilanjutkan pendampingan kehamilan sampai masa pemulihan setelah melahirkan.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://wa.me/6281227911968?text=Halo%20Dokter%2C%20saya%20ingin%20konsultasi%20program%20hamil." target="_blank" rel="noopener">Konsultasi lewat WhatsApp</a>
+        <a class="btn btn-wa" href="https://wa.me/6281227911968?text=Halo%20Dokter%2C%20saya%20ingin%20konsultasi%20program%20hamil." target="_blank" rel="noopener"><svg><use href="#wa"></use></svg>Konsultasi via WhatsApp</a>
         <a class="btn btn-ghost" href="#ingin-hamil">Konsultasi ingin hamil</a>
       </div>
     </div>
     <div class="id-card">
-      <div class="portrait">Foto potret dr. Danny<br>(jas putih, latar polos)<br>rasio 4:5</div>
+      <img src="img/portrait.jpg" alt="Potret dr. Danny Wiguna, Sp.OG" width="900" height="1125">
       <h2>dr. Danny Wiguna, Sp.OG</h2>
       <p class="role">Dokter Spesialis Obstetri &amp; Ginekologi<br>Siloam Hospitals Yogyakarta</p>
     </div>
@@ -301,7 +264,6 @@ footer a{color:#B9C8C0}
   <path d="M0,26 H340 l14,-18 l12,34 l11,-40 l13,44 l12,-26 l14,6 H640 l16,-12 l10,24 l12,-30 l11,34 l13,-20 l15,4 H1200"/>
 </svg>
 
-<!-- KREDENSIAL -->
 <div class="creds">
   <div class="wrap creds-grid">
     <div class="cred"><b>Sp.OG</b><span>Spesialis Obstetri &amp; Ginekologi</span></div>
@@ -311,7 +273,6 @@ footer a{color:#B9C8C0}
   </div>
 </div>
 
-<!-- KONSULTASI INGIN HAMIL -->
 <section class="promil" id="ingin-hamil">
   <div class="wrap">
     <div class="sec-head">
@@ -363,18 +324,9 @@ footer a{color:#B9C8C0}
 
     <p class="risk-title">Alat bantu penelusuran</p>
     <div class="tool-grid">
-      <div class="tool">
-        <h4>USG transvaginal</h4>
-        <p>Melihat kondisi rahim dan indung telur secara lebih jelas dibanding USG perut.</p>
-      </div>
-      <div class="tool">
-        <h4>Histeroskopi diagnostik</h4>
-        <p><i>Office hysteroscopy</i> — melihat langsung rongga rahim dari dalam untuk menemukan kelainan yang tidak terbaca pemeriksaan lain.</p>
-      </div>
-      <div class="tool">
-        <h4>Pemeriksaan laboratorium</h4>
-        <p>Hormon, analisis sperma, dan penanda lain sesuai kebutuhan masing-masing pasangan.</p>
-      </div>
+      <div class="tool"><h4>USG transvaginal</h4><p>Melihat kondisi rahim dan indung telur secara lebih jelas dibanding USG perut.</p></div>
+      <div class="tool"><h4>Histeroskopi diagnostik</h4><p><i>Office hysteroscopy</i> — melihat langsung rongga rahim dari dalam untuk menemukan kelainan yang tidak terbaca pemeriksaan lain.</p></div>
+      <div class="tool"><h4>Pemeriksaan laboratorium</h4><p>Hormon, analisis sperma, dan penanda lain sesuai kebutuhan masing-masing pasangan.</p></div>
     </div>
 
     <div class="pillar">
@@ -388,12 +340,11 @@ footer a{color:#B9C8C0}
     </div>
 
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://wa.me/6281227911968?text=Halo%20Dokter%2C%20saya%20dan%20pasangan%20ingin%20konsultasi%20program%20hamil." target="_blank" rel="noopener">Mulai konsultasi ingin hamil</a>
+      <a class="btn btn-wa" href="https://wa.me/6281227911968?text=Halo%20Dokter%2C%20saya%20dan%20pasangan%20ingin%20konsultasi%20program%20hamil." target="_blank" rel="noopener"><svg><use href="#wa"></use></svg>Mulai konsultasi ingin hamil</a>
     </div>
   </div>
 </section>
 
-<!-- PERJALANAN -->
 <section id="perjalanan">
   <div class="wrap">
     <div class="sec-head">
@@ -401,43 +352,17 @@ footer a{color:#B9C8C0}
       <h2>Enam tahap, satu pendamping yang sama</h2>
       <p>Banyak ibu berganti-ganti dokter di tengah jalan karena penjelasannya tidak nyambung. Berikut tahap-tahap yang bisa Anda lalui bersama saya, dari sebelum hamil sampai setelah melahirkan.</p>
     </div>
-
     <div class="journey">
-      <div class="stage">
-        <div class="num">00</div>
-        <h3>Merencanakan kehamilan</h3>
-        <p>Konsultasi pra-kehamilan, pemeriksaan kesuburan, pemantauan siklus, dan program hamil untuk pasangan yang sedang menunggu.</p>
-      </div>
-      <div class="stage">
-        <div class="num">01</div>
-        <h3>Trimester pertama</h3>
-        <p>Konfirmasi kehamilan, USG awal, penanganan mual dan keluhan awal, serta menentukan apa yang aman dan tidak aman dilakukan.</p>
-      </div>
-      <div class="stage">
-        <div class="num">02</div>
-        <h3>Trimester kedua</h3>
-        <p>USG untuk memeriksa perkembangan organ bayi, skrining risiko, pemantauan berat badan dan tekanan darah ibu.</p>
-      </div>
-      <div class="stage">
-        <div class="num">03</div>
-        <h3>Trimester ketiga</h3>
-        <p>Posisi bayi, tanda-tanda persalinan, dan diskusi terbuka soal pilihan metode melahirkan — lengkap dengan risiko masing-masing.</p>
-      </div>
-      <div class="stage">
-        <div class="num">04</div>
-        <h3>Hari persalinan</h3>
-        <p>Pendampingan persalinan normal maupun operasi sesar di Siloam Hospitals Yogyakarta.</p>
-      </div>
-      <div class="stage">
-        <div class="num">05</div>
-        <h3>Setelah melahirkan</h3>
-        <p>Kontrol pemulihan, keluhan menyusui, pemilihan kontrasepsi, dan menyiapkan tubuh untuk kehamilan berikutnya.</p>
-      </div>
+      <div class="stage"><div class="num">00</div><h3>Merencanakan kehamilan</h3><p>Konsultasi pra-kehamilan, pemeriksaan kesuburan, pemantauan siklus, dan program hamil untuk pasangan yang sedang menunggu.</p></div>
+      <div class="stage"><div class="num">01</div><h3>Trimester pertama</h3><p>Konfirmasi kehamilan, USG awal, penanganan mual dan keluhan awal, serta menentukan apa yang aman dan tidak aman dilakukan.</p></div>
+      <div class="stage"><div class="num">02</div><h3>Trimester kedua</h3><p>USG untuk memeriksa perkembangan organ bayi, skrining risiko, pemantauan berat badan dan tekanan darah ibu.</p></div>
+      <div class="stage"><div class="num">03</div><h3>Trimester ketiga</h3><p>Posisi bayi, tanda-tanda persalinan, dan diskusi terbuka soal pilihan metode melahirkan — lengkap dengan risiko masing-masing.</p></div>
+      <div class="stage"><div class="num">04</div><h3>Hari persalinan</h3><p>Pendampingan persalinan normal maupun operasi sesar di Siloam Hospitals Yogyakarta.</p></div>
+      <div class="stage"><div class="num">05</div><h3>Setelah melahirkan</h3><p>Kontrol pemulihan, keluhan menyusui, pemilihan kontrasepsi, dan menyiapkan tubuh untuk kehamilan berikutnya.</p></div>
     </div>
   </div>
 </section>
 
-<!-- LAYANAN -->
 <section class="services" id="layanan">
   <div class="wrap">
     <div class="sec-head">
@@ -445,7 +370,6 @@ footer a{color:#B9C8C0}
       <h2>Kesehatan reproduksi perempuan, di setiap usia</h2>
       <p>Tidak semua yang perlu diperiksa berhubungan dengan kehamilan. Ini keluhan yang paling sering dibawa pasien ke ruang praktik.</p>
     </div>
-
     <div class="svc-grid">
       <div class="svc"><h3>Gangguan haid</h3><p>Haid tidak teratur, nyeri berlebihan, atau perdarahan di luar siklus.</p></div>
       <div class="svc"><h3>Keputihan &amp; infeksi</h3><p>Keputihan yang berubah warna, berbau, atau disertai gatal dan nyeri.</p></div>
@@ -457,7 +381,6 @@ footer a{color:#B9C8C0}
   </div>
 </section>
 
-<!-- EDUKASI PUBLIK -->
 <section class="talks" id="edukasi">
   <div class="wrap">
     <div class="sec-head">
@@ -466,11 +389,15 @@ footer a{color:#B9C8C0}
       <p>Kelas prenatal di pusat perbelanjaan, seminar untuk karyawan perusahaan, penyuluhan di sekolah, sampai siaran radio. Edukasi paling berguna adalah yang sampai ke orang sebelum mereka jatuh sakit.</p>
     </div>
 
-    <div class="photo-grid">
-      <div class="ph">Foto: kelas prenatal &amp; senam hamil di mall</div>
-      <div class="ph">Foto: talkshow "Mom &amp; Child" Siloam Jogja</div>
-      <div class="ph">Foto: seminar karyawan perusahaan</div>
-      <div class="ph">Foto: siaran radio Smart FM Jogja</div>
+    <div class="gal">
+      <figure class="shot"><img src="img/kelas-prenatal.jpg" alt="dr. Danny memandu kelas prenatal di pusat perbelanjaan" loading="lazy"><figcaption>Kelas prenatal &amp; senam hamil di pusat perbelanjaan</figcaption></figure>
+      <figure class="shot"><img src="img/dermatalk-panel.jpg" alt="Talkshow DermaTalk Siloam Mom &amp; Child" loading="lazy"><figcaption>Talkshow Mom &amp; Child bersama Siloam Jogja</figcaption></figure>
+      <figure class="shot"><img src="img/radio-smartfm.jpg" alt="dr. Danny siaran di Smart FM Yogyakarta" loading="lazy"><figcaption>Siaran edukasi di Smart FM Yogyakarta</figcaption></figure>
+      <figure class="shot"><img src="img/astra-motor.jpg" alt="Seminar kesehatan untuk karyawan perusahaan" loading="lazy"><figcaption>Seminar kesehatan perempuan untuk karyawan</figcaption></figure>
+      <figure class="shot"><img src="img/sekolah.jpg" alt="Penyuluhan kesehatan reproduksi di sekolah menengah" loading="lazy"><figcaption>Penyuluhan kesehatan reproduksi di sekolah</figcaption></figure>
+      <figure class="shot"><img src="img/komunitas.jpg" alt="Sesi komunitas Sukacita Mengandung" loading="lazy"><figcaption>Sesi komunitas &ldquo;Sukacita Mengandung&rdquo;</figcaption></figure>
+      <figure class="shot"><img src="img/kartini-reborn.jpg" alt="Talkshow Kartini Reborn di hotel" loading="lazy"><figcaption>Talkshow &ldquo;Kartini Reborn&rdquo; — deteksi dini kanker serviks</figcaption></figure>
+      <figure class="shot"><img src="img/dermatalk-grup.jpg" alt="Peserta talkshow bersama dr. Danny" loading="lazy"><figcaption>Bersama peserta kelas ibu dan bayi</figcaption></figure>
     </div>
 
     <div class="chips" aria-label="Institusi yang pernah mengundang">
@@ -485,66 +412,56 @@ footer a{color:#B9C8C0}
     </div>
 
     <div class="talks-note">
-      <a class="btn btn-primary" href="https://wa.me/6281227911968?text=Halo%20Dokter%2C%20saya%20ingin%20mengundang%20Dokter%20sebagai%20narasumber." target="_blank" rel="noopener">Undang sebagai narasumber</a>
-      <span style="font-size:.88rem;color:#B9C8C0">Kelas prenatal, seminar karyawan, talkshow, atau penyuluhan sekolah.</span>
+      <a class="btn btn-wa" href="https://wa.me/6281227911968?text=Halo%20Dokter%2C%20saya%20ingin%20mengundang%20Dokter%20sebagai%20narasumber." target="_blank" rel="noopener"><svg><use href="#wa"></use></svg>Undang sebagai narasumber</a>
+      <span style="font-size:.87rem;color:#B7C7BE">Kelas prenatal, seminar karyawan, talkshow, atau penyuluhan sekolah.</span>
     </div>
   </div>
 </section>
 
-<!-- PODCAST -->
 <section class="podcast">
   <div class="wrap pod-in">
     <div class="pod-art">
       <div class="sweep" aria-hidden="true"></div>
-      <span>Podcast &amp; kanal edukasi</span>
-      <h3>Dr. Danny Speaks</h3>
+      <img src="img/speaks-logo.png" alt="Logo Dr. Danny Speaks" loading="lazy">
     </div>
     <div>
       <p class="eyebrow">Bertanya tanpa harus antre</p>
-      <h2 style="font-size:clamp(1.6rem,3.6vw,2.2rem)">Pertanyaan yang sering ditanyakan pasien, dijawab terbuka</h2>
-      <p style="color:var(--ink-soft);margin-top:1rem">Obrolan pendek soal kehamilan dan kesehatan reproduksi — hal-hal yang sering tidak sempat ditanyakan di ruang praktik karena antrean panjang.</p>
-      <div class="cta-row" style="margin-top:1.4rem">
+      <h2 style="font-size:clamp(1.6rem,3.6vw,2.2rem)">Dr. Danny Speaks</h2>
+      <p style="color:var(--ink-soft);margin-top:1rem">Obrolan pendek soal kehamilan dan kesehatan reproduksi — pertanyaan yang sering tidak sempat ditanyakan di ruang praktik karena antrean panjang.</p>
+      <div class="cta-row">
         <a class="btn btn-primary" href="https://www.instagram.com/dans.mecareyou" target="_blank" rel="noopener">Instagram &commat;dans.mecareyou</a>
-        <a class="btn btn-ghost" style="border-color:var(--line);color:var(--ink)" href="https://www.tiktok.com/@dans.mecareyou" target="_blank" rel="noopener">TikTok &commat;dans.mecareyou</a>
+        <a class="btn btn-outline" href="https://www.tiktok.com/@dans.mecareyou" target="_blank" rel="noopener">TikTok &commat;dans.mecareyou</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- JADWAL -->
 <section id="jadwal">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">Tempat praktik</p>
       <h2>Di mana Anda bisa bertemu</h2>
     </div>
-
     <div class="place">
       <div>
         <h3>Siloam Hospitals Yogyakarta</h3>
         <address>Jl. Laksda Adisucipto No. 32–34, Demangan,<br>Gondokusuman, Kota Yogyakarta 55221</address>
-        <p style="margin:.7rem 0 0"><a href="https://maps.app.goo.gl/CzAZiiZ1pXBy9E3o9" target="_blank" rel="noopener" style="color:var(--rose);font-weight:700;font-size:.92rem">Buka di Google Maps &rarr;</a></p>
+        <p style="margin:.7rem 0 0"><a href="https://maps.app.goo.gl/CzAZiiZ1pXBy9E3o9" target="_blank" rel="noopener" style="color:var(--rose);font-weight:700;font-size:.91rem">Buka di Google Maps &rarr;</a></p>
       </div>
       <div>
-        <a class="btn btn-primary" href="https://wa.me/6281227911968?text=Halo%2C%20saya%20ingin%20menanyakan%20jadwal%20praktik%20dr.%20Danny." target="_blank" rel="noopener">Tanya jadwal &amp; buat janji</a>
+        <a class="btn btn-wa" href="https://wa.me/6281227911968?text=Halo%2C%20saya%20ingin%20menanyakan%20jadwal%20praktik%20dr.%20Danny." target="_blank" rel="noopener"><svg><use href="#wa"></use></svg>Tanya jadwal &amp; buat janji</a>
       </div>
     </div>
-
-    <div class="todo">
-      <b>Perlu dikonfirmasi ke dr. Danny:</b> hari dan jam praktik, tempat praktik lain selain Siloam, serta nomor WhatsApp mana yang dipakai untuk publik — nomor pribadi atau admin.
-    </div>
+    <div class="todo"><b>Perlu dikonfirmasi ke dr. Danny:</b> hari dan jam praktik, tempat praktik lain selain Siloam, serta nomor WhatsApp mana yang dipakai untuk publik.</div>
   </div>
 </section>
 
-<!-- KONTAK -->
 <section class="contact">
-  <div class="wrap" style="display:grid;gap:2rem">
-    <div>
-      <h2>Ada yang mengganjal soal kandungan Anda?</h2>
-      <p style="margin-top:1rem">Kirim pesan dulu untuk menanyakan jadwal dan membuat janji. Pemeriksaan tetap dilakukan langsung — diagnosis tidak bisa ditegakkan lewat chat.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://wa.me/6281227911968?text=Halo%20Dokter%2C%20saya%20ingin%20membuat%20janji%20konsultasi." target="_blank" rel="noopener">Kirim pesan WhatsApp</a>
-      </div>
+  <div class="wrap">
+    <h2>Ada yang mengganjal soal kandungan Anda?</h2>
+    <p style="margin-top:1rem">Kirim pesan dulu untuk menanyakan jadwal dan membuat janji. Pemeriksaan tetap dilakukan langsung — diagnosis tidak bisa ditegakkan lewat chat.</p>
+    <div class="cta-row">
+      <a class="btn btn-wa" href="https://wa.me/6281227911968?text=Halo%20Dokter%2C%20saya%20ingin%20membuat%20janji%20konsultasi." target="_blank" rel="noopener"><svg><use href="#wa"></use></svg>Kirim pesan WhatsApp</a>
     </div>
   </div>
 </section>
@@ -553,7 +470,7 @@ footer a{color:#B9C8C0}
 
 <footer>
   <div class="wrap">
-    <p style="margin:0 0 .9rem;display:flex;gap:1.4rem;flex-wrap:wrap">
+    <p class="f-links">
       <a href="https://www.instagram.com/dans.mecareyou" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.tiktok.com/@dans.mecareyou" target="_blank" rel="noopener">TikTok</a>
       <a href="https://maps.app.goo.gl/CzAZiiZ1pXBy9E3o9" target="_blank" rel="noopener">Lokasi praktik</a>
@@ -564,7 +481,7 @@ footer a{color:#B9C8C0}
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/6281227911968?text=Halo%20Dokter%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noopener" aria-label="Hubungi lewat WhatsApp">WhatsApp</a>
+<a class="wa-float" href="https://wa.me/6281227911968?text=Halo%20Dokter%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noopener" aria-label="Hubungi lewat WhatsApp"><svg><use href="#wa"></use></svg>WhatsApp</a>
 
 </body>
 </html>
