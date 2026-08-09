@@ -95,7 +95,7 @@ nav{position:sticky;top:0;z-index:40;background:rgba(240,242,239,.9);backdrop-fi
 .hero .eyebrow::before{background:var(--sage)}
 .id-card{background:rgba(233,239,235,.06);border:1px solid rgba(233,239,235,.18);
   border-radius:var(--r);padding:1.1rem;backdrop-filter:blur(6px)}
-.id-card img{border-radius:12px;width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 25%}
+.id-card img{border-radius:12px;width:100%;height:auto;display:block}
 .id-card h2{font-size:1.3rem;color:#F3F7F4;margin-top:1.1rem}
 .id-card .role{font-size:.88rem;color:var(--sage);margin:.3rem 0 0}
 
@@ -205,60 +205,22 @@ section{padding:4.5rem 0}
 
 
 /* ---------- JADWAL PRAKTIK ---------- */
-.sched-wrap{display:grid;gap:1.4rem;margin-top:2rem}
-@media(min-width:940px){.sched-wrap{grid-template-columns:repeat(2,1fr);gap:1.6rem}}
-.sched{border-radius:var(--r);overflow:hidden;box-shadow:0 14px 34px -24px rgba(15,36,48,.5);background:var(--white)}
-.sched-head{padding:1.3rem 1.5rem;color:#fff;position:relative;overflow:hidden}
-.sched.mandiri .sched-head{background:linear-gradient(135deg,#B25F6B 0%,#8E4753 100%)}
-.sched.jkn .sched-head{background:linear-gradient(135deg,#4A6B58 0%,#2C4A3A 100%)}
-.sched-head::after{content:"";position:absolute;right:-30px;top:-50px;width:150px;height:150px;
-  border-radius:50%;background:rgba(255,255,255,.09)}
-.sched-head .tag{display:inline-block;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
-  font-weight:700;background:rgba(255,255,255,.2);padding:.28rem .7rem;border-radius:999px;margin-bottom:.6rem}
-.sched-head h3{font-size:1.3rem;color:#fff}
-.sched-head p{margin:.3rem 0 0;font-size:.84rem;opacity:.9}
-.rows{padding:.4rem 0}
-.row{display:grid;grid-template-columns:5.6rem 1fr;gap:.7rem;align-items:center;
-  padding:.72rem 1.5rem;position:relative;border-top:1px solid var(--paper-2)}
-.row:first-child{border-top:0}
-.day{font-weight:700;font-size:.9rem;color:var(--ink)}
-.times{display:flex;flex-wrap:wrap;gap:.35rem}
-.times b{font-weight:500;font-size:.82rem;padding:.26rem .6rem;border-radius:8px;
-  font-variant-numeric:tabular-nums;white-space:nowrap}
-.sched.mandiri .times b{background:#F7ECEE;color:#8E4753}
-.sched.jkn .times b{background:#EAF1EC;color:#33543F}
-.times b.kosong{background:var(--paper-2);color:var(--ink-soft);font-style:italic}
-.row.today{background:#FBF7F3}
-.row.today::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px}
-.sched.mandiri .row.today::before{background:var(--rose)}
-.sched.jkn .row.today::before{background:var(--sage-deep)}
-.row.today .day::after{content:"Hari ini";display:block;font-size:.6rem;letter-spacing:.1em;
-  text-transform:uppercase;font-weight:700;color:var(--rose);margin-top:.1rem}
-.sched.jkn .row.today .day::after{color:var(--sage-deep)}
-.sched-note{padding:1rem 1.5rem;background:var(--paper);font-size:.83rem;color:var(--ink-soft);
-  border-top:1px solid var(--line);margin:0}
-.daftar{display:grid;gap:1rem;margin-top:1.6rem}
+.poster-stack{display:grid;gap:2rem;margin-top:2.2rem}
+.poster{margin:0}
+.poster-label{display:flex;align-items:center;gap:.7rem;margin:0 0 .8rem}
+.poster-label span{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
+  color:#fff;background:var(--rose);padding:.3rem .8rem;border-radius:999px}
+.poster.jkn .poster-label span{background:var(--sage-deep)}
+.poster-label b{font-family:Fraunces,serif;font-weight:600;font-size:1.05rem;color:var(--ink)}
+.poster img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line);
+  box-shadow:0 18px 40px -28px rgba(15,36,48,.6);display:block}
+.daftar{display:grid;gap:1rem;margin-top:2.4rem}
 @media(min-width:760px){.daftar{grid-template-columns:repeat(2,1fr)}}
 .daftar div{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--sage);
   border-radius:0 var(--r) var(--r) 0;padding:1.2rem 1.4rem}
 .daftar h4{font-family:Fraunces,serif;font-weight:600;font-size:1rem;margin:0 0 .4rem}
 .daftar p{font-size:.88rem;color:var(--ink-soft);margin:0}
 .updated{font-size:.78rem;color:var(--ink-soft);margin-top:1.2rem}
-
-
-/* ---------- POSTER JADWAL RESMI ---------- */
-.poster-head{margin:3rem 0 1.2rem;max-width:var(--measure)}
-.poster-head h3{font-size:1.25rem;margin-bottom:.4rem}
-.poster-head p{font-size:.9rem;color:var(--ink-soft);margin:0}
-.posters{display:grid;gap:1rem;grid-template-columns:repeat(2,1fr)}
-@media(min-width:900px){.posters{grid-template-columns:repeat(5,1fr)}}
-.poster{margin:0;background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden;
-  transition:transform .2s ease,box-shadow .2s ease}
-.poster:hover{transform:translateY(-3px);box-shadow:0 14px 30px -20px rgba(15,36,48,.6)}
-.poster a{display:block}
-.poster img{width:100%;height:auto}
-.poster figcaption{font-size:.76rem;color:var(--ink-soft);padding:.6rem .75rem .75rem;line-height:1.35}
-.poster figcaption b{display:block;color:var(--ink);font-weight:700;font-size:.8rem;margin-bottom:.1rem}
 
 /* ---------- GRUP MENATAP TATAP ---------- */
 .grup{background:var(--paper-2)}
@@ -320,7 +282,7 @@ footer .f-links{display:flex;gap:1.4rem;flex-wrap:wrap;margin:0 0 .9rem}
       </div>
     </div>
     <div class="id-card">
-      <img src="img/portrait.jpg" alt="Potret dr. Danny Wiguna, Sp.OG" width="1100" height="1100">
+      <img src="img/portrait.jpg" alt="Potret dr. Danny Wiguna, Sp.OG" width="1000" height="1544">
       <h2>dr. Danny Wiguna, Sp.OG</h2>
       <p class="role">Dokter Spesialis Obstetri &amp; Ginekologi<br>Siloam Hospitals Yogyakarta</p>
     </div>
@@ -540,54 +502,27 @@ footer .f-links{display:flex;gap:1.4rem;flex-wrap:wrap;margin:0 0 .9rem}
       </div>
     </div>
 
-    <div class="sched-wrap">
-      <div class="sched mandiri">
-        <div class="sched-head">
-          <span class="tag">Walk in</span>
-          <h3>Pasien Mandiri &amp; Asuransi</h3>
-          <p>Langsung datang, tanpa daftar lewat aplikasi</p>
-        </div>
-        <div class="rows">
-          <div class="row" data-day="1"><span class="day">Senin</span><span class="times"><b>09.00–13.00</b><b>14.00–15.00</b><b>16.00–20.00</b></span></div>
-          <div class="row" data-day="2"><span class="day">Selasa</span><span class="times"><b>08.00–14.00</b><b>16.00–20.00</b></span></div>
-          <div class="row" data-day="3"><span class="day">Rabu</span><span class="times"><b>08.00–13.00</b><b>14.00–15.00</b><b>16.00–20.00</b></span></div>
-          <div class="row" data-day="4"><span class="day">Kamis</span><span class="times"><b>08.30–13.00</b><b>14.00–15.00</b><b>16.00–20.00</b></span></div>
-          <div class="row" data-day="5"><span class="day">Jumat</span><span class="times"><b>08.30–13.00</b><b>14.00–15.00</b><b>16.00–20.00</b></span></div>
-          <div class="row" data-day="6"><span class="day">Sabtu</span><span class="times"><b>09.00–15.00</b><b>16.00–19.00</b></span></div>
-          <div class="row" data-day="0"><span class="day">Minggu</span><span class="times"><b>09.00–12.00</b></span></div>
-        </div>
-        <p class="sched-note">Tidak perlu mendaftar lewat aplikasi My Siloam. Silakan datang langsung sesuai jam di atas.</p>
-      </div>
-
-      <div class="sched jkn">
-        <div class="sched-head">
-          <span class="tag">Rujukan</span>
-          <h3>Pasien JKN BPJS</h3>
-          <p>Sesuai ketentuan dan tanggal kontrol</p>
-        </div>
-        <div class="rows">
-          <div class="row" data-day="1"><span class="day">Senin</span><span class="times"><b>07.00–09.00</b><b>13.00–14.00</b><b>20.00–21.00</b></span></div>
-          <div class="row" data-day="2"><span class="day">Selasa</span><span class="times"><b>07.00–08.00</b><b>14.00–15.00</b><b>20.00–21.00</b></span></div>
-          <div class="row" data-day="3"><span class="day">Rabu</span><span class="times"><b>07.00–08.00</b><b>13.00–14.00</b><b>20.00–21.00</b></span></div>
-          <div class="row" data-day="4"><span class="day">Kamis</span><span class="times"><b>07.00–08.30</b><b>13.00–14.00</b><b>20.00–21.00</b></span></div>
-          <div class="row" data-day="5"><span class="day">Jumat</span><span class="times"><b>07.00–08.30</b><b>15.00–16.00</b><b>19.00–20.00</b></span></div>
-          <div class="row" data-day="6"><span class="day">Sabtu</span><span class="times"><b>07.00–09.00</b><b>15.00–16.00</b><b>19.00–20.00</b></span></div>
-          <div class="row" data-day="0"><span class="day">Minggu</span><span class="times"><b class="kosong">Tidak ada jadwal</b></span></div>
-        </div>
-        <p class="sched-note">Datang sesuai ketentuan dan tanggal kontrol. Bila ada keadaan darurat sebelum tanggal kontrol, hubungi lebih dulu atau datang melalui IGD Siloam Hospitals Yogyakarta.</p>
-      </div>
-    </div>
-
-    <div class="poster-head">
-      <h3>Poster jadwal resmi</h3>
-      <p>Versi resmi dari Siloam Hospitals Yogyakarta. Ketuk untuk memperbesar atau menyimpannya.</p>
-    </div>
-    <div class="posters">
-      <figure class="poster"><a href="img/jadwal-mandiri-1.jpg" target="_blank" rel="noopener"><img src="img/jadwal-mandiri-1.jpg" alt="Jadwal praktik dr. Danny Wiguna Sp.OG &mdash; Mandiri &amp; Asuransi Senin &ndash; Kamis" loading="lazy"></a><figcaption><b>Mandiri &amp; Asuransi</b>Senin &ndash; Kamis</figcaption></figure>
-      <figure class="poster"><a href="img/jadwal-mandiri-2.jpg" target="_blank" rel="noopener"><img src="img/jadwal-mandiri-2.jpg" alt="Jadwal praktik dr. Danny Wiguna Sp.OG &mdash; Mandiri &amp; Asuransi Jumat, Sabtu, Minggu" loading="lazy"></a><figcaption><b>Mandiri &amp; Asuransi</b>Jumat, Sabtu, Minggu</figcaption></figure>
-      <figure class="poster"><a href="img/jadwal-jkn-1.jpg" target="_blank" rel="noopener"><img src="img/jadwal-jkn-1.jpg" alt="Jadwal praktik dr. Danny Wiguna Sp.OG &mdash; JKN BPJS Senin &ndash; Kamis" loading="lazy"></a><figcaption><b>JKN BPJS</b>Senin &ndash; Kamis</figcaption></figure>
-      <figure class="poster"><a href="img/jadwal-jkn-2.jpg" target="_blank" rel="noopener"><img src="img/jadwal-jkn-2.jpg" alt="Jadwal praktik dr. Danny Wiguna Sp.OG &mdash; JKN BPJS Jumat &amp; Sabtu" loading="lazy"></a><figcaption><b>JKN BPJS</b>Jumat &amp; Sabtu</figcaption></figure>
-      <figure class="poster"><a href="img/cara-konsultasi.jpg" target="_blank" rel="noopener"><img src="img/cara-konsultasi.jpg" alt="Jadwal praktik dr. Danny Wiguna Sp.OG &mdash; Cara konsultasi Alur pendaftaran" loading="lazy"></a><figcaption><b>Cara konsultasi</b>Alur pendaftaran</figcaption></figure>
+    <div class="poster-stack">
+      <figure class="poster mandiri">
+        <p class="poster-label"><span>Pasien Mandiri &amp; Asuransi</span><b>Senin &ndash; Kamis</b></p>
+        <img src="img/jadwal-mandiri-1.jpg" alt="Jadwal praktik dr. Danny Wiguna Sp.OG untuk pasien mandiri dan asuransi di Siloam Hospitals Yogyakarta. Senin 09.00-13.00, 14.00-15.00, 16.00-20.00 WIB. Selasa 08.00-14.00, 16.00-20.00 WIB. Rabu 08.00-13.00, 14.00-15.00, 16.00-20.00 WIB. Kamis 08.30-13.00, 14.00-15.00, 16.00-20.00 WIB." loading="lazy">
+      </figure>
+      <figure class="poster mandiri">
+        <p class="poster-label"><span>Pasien Mandiri &amp; Asuransi</span><b>Jumat, Sabtu, Minggu</b></p>
+        <img src="img/jadwal-mandiri-2.jpg" alt="Jadwal praktik dr. Danny Wiguna Sp.OG untuk pasien mandiri dan asuransi. Jumat 08.30-13.00, 14.00-15.00, 16.00-20.00 WIB. Sabtu 09.00-15.00, 16.00-19.00 WIB. Minggu 09.00-12.00 WIB." loading="lazy">
+      </figure>
+      <figure class="poster jkn">
+        <p class="poster-label"><span>Pasien JKN BPJS</span><b>Senin &ndash; Kamis</b></p>
+        <img src="img/jadwal-jkn-1.jpg" alt="Jadwal praktik dr. Danny Wiguna Sp.OG untuk pasien JKN BPJS di Siloam Hospitals Yogyakarta. Senin 07.00-09.00, 13.00-14.00, 20.00-21.00 WIB. Selasa 07.00-08.00, 14.00-15.00, 20.00-21.00 WIB. Rabu 07.00-08.00, 13.00-14.00, 20.00-21.00 WIB. Kamis 07.00-08.30, 13.00-14.00, 20.00-21.00 WIB." loading="lazy">
+      </figure>
+      <figure class="poster jkn">
+        <p class="poster-label"><span>Pasien JKN BPJS</span><b>Jumat &amp; Sabtu</b></p>
+        <img src="img/jadwal-jkn-2.jpg" alt="Jadwal praktik dr. Danny Wiguna Sp.OG untuk pasien JKN BPJS. Jumat 07.00-08.30, 15.00-16.00, 19.00-20.00 WIB. Sabtu 07.00-09.00, 15.00-16.00, 19.00-20.00 WIB. Minggu tidak ada jadwal JKN." loading="lazy">
+      </figure>
+      <figure class="poster mandiri">
+        <p class="poster-label"><span>Cara konsultasi</span><b>Alur pendaftaran</b></p>
+        <img src="img/cara-konsultasi.jpg" alt="Cara konsultasi dengan dr. Danny Wiguna Sp.OG. Pembayaran mandiri dan asuransi langsung datang walk in tanpa perlu daftar lewat aplikasi My Siloam. Pembayaran JKN datang sesuai ketentuan; bila ada keadaan darurat sebelum tanggal kontrol dapat menghubungi lebih dulu atau datang lewat IGD RS Siloam Yogyakarta." loading="lazy">
+      </figure>
     </div>
 
     <div class="daftar">
@@ -631,12 +566,5 @@ footer .f-links{display:flex;gap:1.4rem;flex-wrap:wrap;margin:0 0 .9rem}
 </footer>
 
 <a class="wa-float" href="https://wa.me/6281227911968?text=Halo%20Dokter%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noopener" aria-label="Hubungi lewat WhatsApp"><svg><use href="#wa"></use></svg>WhatsApp</a>
-
-<script>
-(function(){
-  var d = new Date().getDay();
-  document.querySelectorAll('.row[data-day="'+d+'"]').forEach(function(el){ el.classList.add('today'); });
-})();
-</script>
 </body>
 </html>
