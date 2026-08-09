@@ -203,6 +203,38 @@ section{padding:4.5rem 0}
 .contact h2{color:#fff;font-size:clamp(1.8rem,4vw,2.6rem);max-width:16ch}
 .contact p{color:#D5E2DA;max-width:47ch}
 
+
+/* ---------- JADWAL PRAKTIK ---------- */
+.sched-wrap{display:grid;gap:1.4rem;margin-top:2rem}
+@media(min-width:900px){.sched-wrap{grid-template-columns:repeat(2,1fr);gap:1.6rem}}
+.sched{background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.sched-head{padding:1.1rem 1.4rem;border-bottom:1px solid var(--line)}
+.sched-head h3{font-size:1.1rem}
+.sched-head span{font-size:.78rem;color:var(--ink-soft);display:block;margin-top:.2rem}
+.sched.jkn .sched-head{background:var(--paper)}
+.sched.mandiri .sched-head{background:#F6EEF0}
+.row{display:grid;grid-template-columns:5.2rem 1fr;gap:.8rem;padding:.75rem 1.4rem;border-top:1px solid var(--line)}
+.row:first-of-type{border-top:0}
+.row dt{font-weight:700;font-size:.88rem;color:var(--ink)}
+.row dd{margin:0;font-size:.88rem;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.row dd span{display:block}
+.sched-note{padding:1rem 1.4rem;background:var(--paper);font-size:.83rem;color:var(--ink-soft);border-top:1px solid var(--line)}
+.daftar{display:grid;gap:1rem;margin-top:1.6rem}
+@media(min-width:760px){.daftar{grid-template-columns:repeat(2,1fr)}}
+.daftar div{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--sage);border-radius:0 var(--r) var(--r) 0;padding:1.2rem 1.4rem}
+.daftar h4{font-family:Fraunces,serif;font-weight:600;font-size:1rem;margin:0 0 .4rem}
+.daftar p{font-size:.88rem;color:var(--ink-soft);margin:0}
+.updated{font-size:.78rem;color:var(--ink-soft);margin-top:1.2rem}
+
+/* ---------- GRUP MENATAP TATAP ---------- */
+.grup{background:var(--paper-2)}
+.grup-in{display:grid;gap:1.6rem}
+@media(min-width:880px){.grup-in{grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}}
+.grup-list{display:grid;gap:.8rem;margin-top:1.4rem}
+.grup-list div{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:1rem 1.2rem}
+.grup-list b{font-family:Fraunces,serif;font-weight:600;font-size:1rem;display:block;margin-bottom:.2rem}
+.grup-list span{font-size:.87rem;color:var(--ink-soft)}
+
 footer{background:var(--ink);color:#8DA398;font-size:.85rem;padding:2.4rem 0}
 footer a{color:#B7C7BE}
 footer .f-links{display:flex;gap:1.4rem;flex-wrap:wrap;margin:0 0 .9rem}
@@ -232,6 +264,7 @@ footer .f-links{display:flex;gap:1.4rem;flex-wrap:wrap;margin:0 0 .9rem}
       <a href="#perjalanan">Perjalanan kehamilan</a>
       <a href="#layanan">Layanan</a>
       <a href="#edukasi">Edukasi publik</a>
+      <a href="#grup">Menatap Tatap</a>
       <a href="#jadwal">Jadwal praktik</a>
     </div>
   </div>
@@ -436,23 +469,85 @@ footer .f-links{display:flex;gap:1.4rem;flex-wrap:wrap;margin:0 0 .9rem}
   </div>
 </section>
 
+<section class="grup" id="grup">
+  <div class="wrap grup-in">
+    <div>
+      <p class="eyebrow">Program Siloam Hospitals Yogyakarta</p>
+      <h2 style="font-size:clamp(1.6rem,3.6vw,2.2rem)">Menatap Tatap</h2>
+      <p style="color:var(--ink-soft);margin-top:1rem">Grup diskusi dan edukasi kesehatan bersama dr. Danny Wiguna, Sp.OG. Ruang untuk bertanya di luar jam praktik, bersama peserta lain yang sedang berada di fase yang sama.</p>
+      <div class="cta-row">
+        <a class="btn btn-wa" href="https://wa.me/6281227911968?text=Halo%2C%20saya%20ingin%20bergabung%20grup%20Menatap%20Tatap." target="_blank" rel="noopener"><svg><use href="#wa"></use></svg>Tanya cara bergabung</a>
+      </div>
+    </div>
+    <div class="grup-list">
+      <div><b>Ingin Hamil</b><span>Untuk pasangan yang sedang menjalani program hamil.</span></div>
+      <div><b>Kehamilan</b><span>Untuk ibu yang sedang menjalani masa kehamilan.</span></div>
+      <div><b>Pasca Persalinan</b><span>Untuk ibu setelah melahirkan — pemulihan dan menyusui.</span></div>
+    </div>
+  </div>
+</section>
+
 <section id="jadwal">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Tempat praktik</p>
-      <h2>Di mana Anda bisa bertemu</h2>
+      <p class="eyebrow">Tempat &amp; jadwal praktik</p>
+      <h2>Di mana dan kapan Anda bisa bertemu</h2>
+      <p>Seluruh praktik berlangsung di Siloam Hospitals Yogyakarta. Jam praktik dibedakan antara pasien mandiri/asuransi dan pasien JKN BPJS.</p>
     </div>
+
     <div class="place">
       <div>
         <h3>Siloam Hospitals Yogyakarta</h3>
-        <address>Jl. Laksda Adisucipto No. 32–34, Demangan,<br>Gondokusuman, Kota Yogyakarta 55221</address>
+        <address>Jl. Laksda Adisucipto No. 32&ndash;34, Demangan,<br>Gondokusuman, Kota Yogyakarta 55221</address>
         <p style="margin:.7rem 0 0"><a href="https://maps.app.goo.gl/CzAZiiZ1pXBy9E3o9" target="_blank" rel="noopener" style="color:var(--rose);font-weight:700;font-size:.91rem">Buka di Google Maps &rarr;</a></p>
       </div>
       <div>
-        <a class="btn btn-wa" href="https://wa.me/6281227911968?text=Halo%2C%20saya%20ingin%20menanyakan%20jadwal%20praktik%20dr.%20Danny." target="_blank" rel="noopener"><svg><use href="#wa"></use></svg>Tanya jadwal &amp; buat janji</a>
+        <a class="btn btn-wa" href="https://wa.me/6281227911968?text=Halo%2C%20saya%20ingin%20membuat%20janji%20dengan%20dr.%20Danny." target="_blank" rel="noopener"><svg><use href="#wa"></use></svg>Buat janji</a>
       </div>
     </div>
-    <div class="todo"><b>Perlu dikonfirmasi ke dr. Danny:</b> hari dan jam praktik, tempat praktik lain selain Siloam, serta nomor WhatsApp mana yang dipakai untuk publik.</div>
+
+    <div class="sched-wrap">
+      <div class="sched mandiri">
+        <div class="sched-head"><h3>Pasien Mandiri &amp; Asuransi</h3><span>Langsung datang (walk in)</span></div>
+        <dl style="margin:0">
+          <div class="row"><dt>Senin</dt><dd><span>09.00&ndash;13.00</span><span>14.00&ndash;15.00</span><span>16.00&ndash;20.00</span></dd></div>
+          <div class="row"><dt>Selasa</dt><dd><span>08.00&ndash;14.00</span><span>16.00&ndash;20.00</span></dd></div>
+          <div class="row"><dt>Rabu</dt><dd><span>08.00&ndash;13.00</span><span>14.00&ndash;15.00</span><span>16.00&ndash;20.00</span></dd></div>
+          <div class="row"><dt>Kamis</dt><dd><span>08.30&ndash;13.00</span><span>14.00&ndash;15.00</span><span>16.00&ndash;20.00</span></dd></div>
+          <div class="row"><dt>Jumat</dt><dd><span>08.30&ndash;13.00</span><span>14.00&ndash;15.00</span><span>16.00&ndash;20.00</span></dd></div>
+          <div class="row"><dt>Sabtu</dt><dd><span>09.00&ndash;15.00</span><span>16.00&ndash;19.00</span></dd></div>
+          <div class="row"><dt>Minggu</dt><dd><span>09.00&ndash;12.00</span></dd></div>
+        </dl>
+        <p class="sched-note" style="margin:0">Tidak perlu mendaftar lewat aplikasi My Siloam. Silakan datang langsung sesuai jam di atas.</p>
+      </div>
+
+      <div class="sched jkn">
+        <div class="sched-head"><h3>Pasien JKN BPJS</h3><span>Sesuai ketentuan rujukan</span></div>
+        <dl style="margin:0">
+          <div class="row"><dt>Senin</dt><dd><span>07.00&ndash;09.00</span><span>13.00&ndash;14.00</span><span>20.00&ndash;21.00</span></dd></div>
+          <div class="row"><dt>Selasa</dt><dd><span>07.00&ndash;08.00</span><span>14.00&ndash;15.00</span><span>20.00&ndash;21.00</span></dd></div>
+          <div class="row"><dt>Rabu</dt><dd><span>07.00&ndash;08.00</span><span>13.00&ndash;14.00</span><span>20.00&ndash;21.00</span></dd></div>
+          <div class="row"><dt>Kamis</dt><dd><span>07.00&ndash;08.30</span><span>13.00&ndash;14.00</span><span>20.00&ndash;21.00</span></dd></div>
+          <div class="row"><dt>Jumat</dt><dd><span>07.00&ndash;08.30</span><span>15.00&ndash;16.00</span><span>19.00&ndash;20.00</span></dd></div>
+          <div class="row"><dt>Sabtu</dt><dd><span>07.00&ndash;09.00</span><span>15.00&ndash;16.00</span><span>19.00&ndash;20.00</span></dd></div>
+          <div class="row"><dt>Minggu</dt><dd><span>Tidak ada jadwal</span></dd></div>
+        </dl>
+        <p class="sched-note" style="margin:0">Datang sesuai ketentuan dan tanggal kontrol. Bila ada keadaan darurat sebelum tanggal kontrol, hubungi lebih dulu atau datang melalui IGD Siloam Hospitals Yogyakarta.</p>
+      </div>
+    </div>
+
+    <div class="daftar">
+      <div>
+        <h4>Cara mendaftar</h4>
+        <p>Pasien mandiri dan asuransi cukup datang langsung tanpa aplikasi. Pasien JKN mengikuti alur rujukan dan tanggal kontrol yang sudah ditetapkan.</p>
+      </div>
+      <div>
+        <h4>Keadaan darurat</h4>
+        <p>Untuk kondisi mendesak di luar jam praktik, gunakan IGD Siloam Hospitals Yogyakarta yang buka 24 jam.</p>
+      </div>
+    </div>
+
+    <p class="updated">Jadwal diperbarui Juni 2026. Jam praktik dapat berubah sewaktu-waktu mengikuti kebijakan rumah sakit &mdash; konfirmasi lebih dulu lewat WhatsApp bila Anda datang dari luar kota.</p>
   </div>
 </section>
 
