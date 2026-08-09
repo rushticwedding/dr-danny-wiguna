@@ -206,22 +206,41 @@ section{padding:4.5rem 0}
 
 /* ---------- JADWAL PRAKTIK ---------- */
 .sched-wrap{display:grid;gap:1.4rem;margin-top:2rem}
-@media(min-width:900px){.sched-wrap{grid-template-columns:repeat(2,1fr);gap:1.6rem}}
-.sched{background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.sched-head{padding:1.1rem 1.4rem;border-bottom:1px solid var(--line)}
-.sched-head h3{font-size:1.1rem}
-.sched-head span{font-size:.78rem;color:var(--ink-soft);display:block;margin-top:.2rem}
-.sched.jkn .sched-head{background:var(--paper)}
-.sched.mandiri .sched-head{background:#F6EEF0}
-.row{display:grid;grid-template-columns:5.2rem 1fr;gap:.8rem;padding:.75rem 1.4rem;border-top:1px solid var(--line)}
-.row:first-of-type{border-top:0}
-.row dt{font-weight:700;font-size:.88rem;color:var(--ink)}
-.row dd{margin:0;font-size:.88rem;color:var(--ink-soft);font-variant-numeric:tabular-nums}
-.row dd span{display:block}
-.sched-note{padding:1rem 1.4rem;background:var(--paper);font-size:.83rem;color:var(--ink-soft);border-top:1px solid var(--line)}
+@media(min-width:940px){.sched-wrap{grid-template-columns:repeat(2,1fr);gap:1.6rem}}
+.sched{border-radius:var(--r);overflow:hidden;box-shadow:0 14px 34px -24px rgba(15,36,48,.5);background:var(--white)}
+.sched-head{padding:1.3rem 1.5rem;color:#fff;position:relative;overflow:hidden}
+.sched.mandiri .sched-head{background:linear-gradient(135deg,#B25F6B 0%,#8E4753 100%)}
+.sched.jkn .sched-head{background:linear-gradient(135deg,#4A6B58 0%,#2C4A3A 100%)}
+.sched-head::after{content:"";position:absolute;right:-30px;top:-50px;width:150px;height:150px;
+  border-radius:50%;background:rgba(255,255,255,.09)}
+.sched-head .tag{display:inline-block;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:700;background:rgba(255,255,255,.2);padding:.28rem .7rem;border-radius:999px;margin-bottom:.6rem}
+.sched-head h3{font-size:1.3rem;color:#fff}
+.sched-head p{margin:.3rem 0 0;font-size:.84rem;opacity:.9}
+.rows{padding:.4rem 0}
+.row{display:grid;grid-template-columns:5.6rem 1fr;gap:.7rem;align-items:center;
+  padding:.72rem 1.5rem;position:relative;border-top:1px solid var(--paper-2)}
+.row:first-child{border-top:0}
+.day{font-weight:700;font-size:.9rem;color:var(--ink)}
+.times{display:flex;flex-wrap:wrap;gap:.35rem}
+.times b{font-weight:500;font-size:.82rem;padding:.26rem .6rem;border-radius:8px;
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.sched.mandiri .times b{background:#F7ECEE;color:#8E4753}
+.sched.jkn .times b{background:#EAF1EC;color:#33543F}
+.times b.kosong{background:var(--paper-2);color:var(--ink-soft);font-style:italic}
+.row.today{background:#FBF7F3}
+.row.today::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px}
+.sched.mandiri .row.today::before{background:var(--rose)}
+.sched.jkn .row.today::before{background:var(--sage-deep)}
+.row.today .day::after{content:"Hari ini";display:block;font-size:.6rem;letter-spacing:.1em;
+  text-transform:uppercase;font-weight:700;color:var(--rose);margin-top:.1rem}
+.sched.jkn .row.today .day::after{color:var(--sage-deep)}
+.sched-note{padding:1rem 1.5rem;background:var(--paper);font-size:.83rem;color:var(--ink-soft);
+  border-top:1px solid var(--line);margin:0}
 .daftar{display:grid;gap:1rem;margin-top:1.6rem}
 @media(min-width:760px){.daftar{grid-template-columns:repeat(2,1fr)}}
-.daftar div{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--sage);border-radius:0 var(--r) var(--r) 0;padding:1.2rem 1.4rem}
+.daftar div{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--sage);
+  border-radius:0 var(--r) var(--r) 0;padding:1.2rem 1.4rem}
 .daftar h4{font-family:Fraunces,serif;font-weight:600;font-size:1rem;margin:0 0 .4rem}
 .daftar p{font-size:.88rem;color:var(--ink-soft);margin:0}
 .updated{font-size:.78rem;color:var(--ink-soft);margin-top:1.2rem}
@@ -508,31 +527,39 @@ footer .f-links{display:flex;gap:1.4rem;flex-wrap:wrap;margin:0 0 .9rem}
 
     <div class="sched-wrap">
       <div class="sched mandiri">
-        <div class="sched-head"><h3>Pasien Mandiri &amp; Asuransi</h3><span>Langsung datang (walk in)</span></div>
-        <dl style="margin:0">
-          <div class="row"><dt>Senin</dt><dd><span>09.00&ndash;13.00</span><span>14.00&ndash;15.00</span><span>16.00&ndash;20.00</span></dd></div>
-          <div class="row"><dt>Selasa</dt><dd><span>08.00&ndash;14.00</span><span>16.00&ndash;20.00</span></dd></div>
-          <div class="row"><dt>Rabu</dt><dd><span>08.00&ndash;13.00</span><span>14.00&ndash;15.00</span><span>16.00&ndash;20.00</span></dd></div>
-          <div class="row"><dt>Kamis</dt><dd><span>08.30&ndash;13.00</span><span>14.00&ndash;15.00</span><span>16.00&ndash;20.00</span></dd></div>
-          <div class="row"><dt>Jumat</dt><dd><span>08.30&ndash;13.00</span><span>14.00&ndash;15.00</span><span>16.00&ndash;20.00</span></dd></div>
-          <div class="row"><dt>Sabtu</dt><dd><span>09.00&ndash;15.00</span><span>16.00&ndash;19.00</span></dd></div>
-          <div class="row"><dt>Minggu</dt><dd><span>09.00&ndash;12.00</span></dd></div>
-        </dl>
-        <p class="sched-note" style="margin:0">Tidak perlu mendaftar lewat aplikasi My Siloam. Silakan datang langsung sesuai jam di atas.</p>
+        <div class="sched-head">
+          <span class="tag">Walk in</span>
+          <h3>Pasien Mandiri &amp; Asuransi</h3>
+          <p>Langsung datang, tanpa daftar lewat aplikasi</p>
+        </div>
+        <div class="rows">
+          <div class="row" data-day="1"><span class="day">Senin</span><span class="times"><b>09.00–13.00</b><b>14.00–15.00</b><b>16.00–20.00</b></span></div>
+          <div class="row" data-day="2"><span class="day">Selasa</span><span class="times"><b>08.00–14.00</b><b>16.00–20.00</b></span></div>
+          <div class="row" data-day="3"><span class="day">Rabu</span><span class="times"><b>08.00–13.00</b><b>14.00–15.00</b><b>16.00–20.00</b></span></div>
+          <div class="row" data-day="4"><span class="day">Kamis</span><span class="times"><b>08.30–13.00</b><b>14.00–15.00</b><b>16.00–20.00</b></span></div>
+          <div class="row" data-day="5"><span class="day">Jumat</span><span class="times"><b>08.30–13.00</b><b>14.00–15.00</b><b>16.00–20.00</b></span></div>
+          <div class="row" data-day="6"><span class="day">Sabtu</span><span class="times"><b>09.00–15.00</b><b>16.00–19.00</b></span></div>
+          <div class="row" data-day="0"><span class="day">Minggu</span><span class="times"><b>09.00–12.00</b></span></div>
+        </div>
+        <p class="sched-note">Tidak perlu mendaftar lewat aplikasi My Siloam. Silakan datang langsung sesuai jam di atas.</p>
       </div>
 
       <div class="sched jkn">
-        <div class="sched-head"><h3>Pasien JKN BPJS</h3><span>Sesuai ketentuan rujukan</span></div>
-        <dl style="margin:0">
-          <div class="row"><dt>Senin</dt><dd><span>07.00&ndash;09.00</span><span>13.00&ndash;14.00</span><span>20.00&ndash;21.00</span></dd></div>
-          <div class="row"><dt>Selasa</dt><dd><span>07.00&ndash;08.00</span><span>14.00&ndash;15.00</span><span>20.00&ndash;21.00</span></dd></div>
-          <div class="row"><dt>Rabu</dt><dd><span>07.00&ndash;08.00</span><span>13.00&ndash;14.00</span><span>20.00&ndash;21.00</span></dd></div>
-          <div class="row"><dt>Kamis</dt><dd><span>07.00&ndash;08.30</span><span>13.00&ndash;14.00</span><span>20.00&ndash;21.00</span></dd></div>
-          <div class="row"><dt>Jumat</dt><dd><span>07.00&ndash;08.30</span><span>15.00&ndash;16.00</span><span>19.00&ndash;20.00</span></dd></div>
-          <div class="row"><dt>Sabtu</dt><dd><span>07.00&ndash;09.00</span><span>15.00&ndash;16.00</span><span>19.00&ndash;20.00</span></dd></div>
-          <div class="row"><dt>Minggu</dt><dd><span>Tidak ada jadwal</span></dd></div>
-        </dl>
-        <p class="sched-note" style="margin:0">Datang sesuai ketentuan dan tanggal kontrol. Bila ada keadaan darurat sebelum tanggal kontrol, hubungi lebih dulu atau datang melalui IGD Siloam Hospitals Yogyakarta.</p>
+        <div class="sched-head">
+          <span class="tag">Rujukan</span>
+          <h3>Pasien JKN BPJS</h3>
+          <p>Sesuai ketentuan dan tanggal kontrol</p>
+        </div>
+        <div class="rows">
+          <div class="row" data-day="1"><span class="day">Senin</span><span class="times"><b>07.00–09.00</b><b>13.00–14.00</b><b>20.00–21.00</b></span></div>
+          <div class="row" data-day="2"><span class="day">Selasa</span><span class="times"><b>07.00–08.00</b><b>14.00–15.00</b><b>20.00–21.00</b></span></div>
+          <div class="row" data-day="3"><span class="day">Rabu</span><span class="times"><b>07.00–08.00</b><b>13.00–14.00</b><b>20.00–21.00</b></span></div>
+          <div class="row" data-day="4"><span class="day">Kamis</span><span class="times"><b>07.00–08.30</b><b>13.00–14.00</b><b>20.00–21.00</b></span></div>
+          <div class="row" data-day="5"><span class="day">Jumat</span><span class="times"><b>07.00–08.30</b><b>15.00–16.00</b><b>19.00–20.00</b></span></div>
+          <div class="row" data-day="6"><span class="day">Sabtu</span><span class="times"><b>07.00–09.00</b><b>15.00–16.00</b><b>19.00–20.00</b></span></div>
+          <div class="row" data-day="0"><span class="day">Minggu</span><span class="times"><b class="kosong">Tidak ada jadwal</b></span></div>
+        </div>
+        <p class="sched-note">Datang sesuai ketentuan dan tanggal kontrol. Bila ada keadaan darurat sebelum tanggal kontrol, hubungi lebih dulu atau datang melalui IGD Siloam Hospitals Yogyakarta.</p>
       </div>
     </div>
 
@@ -578,5 +605,11 @@ footer .f-links{display:flex;gap:1.4rem;flex-wrap:wrap;margin:0 0 .9rem}
 
 <a class="wa-float" href="https://wa.me/6281227911968?text=Halo%20Dokter%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noopener" aria-label="Hubungi lewat WhatsApp"><svg><use href="#wa"></use></svg>WhatsApp</a>
 
+<script>
+(function(){
+  var d = new Date().getDay();
+  document.querySelectorAll('.row[data-day="'+d+'"]').forEach(function(el){ el.classList.add('today'); });
+})();
+</script>
 </body>
 </html>
