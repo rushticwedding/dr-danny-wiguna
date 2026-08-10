@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galeri — dr. Danny Wiguna, Sp.OG</title>
+<meta name="description" content="Galeri kegiatan dr. Danny Wiguna, Sp.OG: Klinik Inseminasi Siloam Hospitals Yogyakarta dan pelatihan bedah robotik.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Karla:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0F2430;--ink-soft:#3A5666;--paper:#F0F2EF;--paper-2:#E3E8E3;
+  --sage:#7FA189;--sage-deep:#4A6B58;--rose:#B25F6B;--line:#C8D0C9;--white:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Karla,system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.13;margin:0}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(1140px,92vw);margin-inline:auto}
+a:focus-visible,button:focus-visible{outline:3px solid var(--rose);outline-offset:3px;border-radius:8px}
+
+.top{background:var(--ink);color:#E9EFEB;padding:3.2rem 0 2.6rem;position:relative;overflow:hidden}
+.sweep{position:absolute;inset:0;pointer-events:none;
+  background:conic-gradient(from 200deg at 50% -10%,rgba(127,161,137,0) 0deg,
+    rgba(127,161,137,.28) 18deg,rgba(178,95,107,.14) 30deg,rgba(127,161,137,0) 46deg);
+  mask-image:radial-gradient(120% 90% at 50% 0%,#000 20%,transparent 78%);
+  -webkit-mask-image:radial-gradient(120% 90% at 50% 0%,#000 20%,transparent 78%)}
+.top .wrap{position:relative}
+.eyebrow{font-size:.71rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;
+  color:var(--sage);margin:0 0 1rem}
+.top h1{font-size:clamp(1.8rem,4.6vw,2.9rem);color:#F3F7F4;max-width:22ch}
+.top h1 em{font-style:italic;color:var(--sage)}
+.top p{color:#B7C7BE;max-width:52ch;margin:1.1rem 0 0}
+.back{display:inline-block;margin-top:1.6rem;font-size:.88rem;color:#B7C7BE;text-decoration:none}
+.back:hover{color:#fff}
+
+.gal{padding:2.6rem 0 1rem}
+.viewport{position:relative}
+.track{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;
+  scrollbar-width:none;padding-bottom:.5rem}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 78%;margin:0;scroll-snap-align:center;background:var(--white);
+  border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:zoom-in}
+@media(min-width:760px){.slide{flex-basis:42%}}
+@media(min-width:1100px){.slide{flex-basis:30%}}
+.slide img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.slide figcaption{font-size:.79rem;color:var(--ink-soft);padding:.7rem .85rem .85rem;line-height:1.4}
+.nav{position:absolute;top:38%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:rgba(255,255,255,.94);color:var(--ink);
+  font-size:1.3rem;line-height:1;cursor:pointer;display:none;place-items:center;
+  box-shadow:0 8px 20px -12px rgba(15,36,48,.6)}
+@media(min-width:760px){.nav{display:grid}}
+.nav.prev{left:-14px} .nav.next{right:-14px}
+.hint{text-align:center;font-size:.82rem;color:var(--ink-soft);margin:1rem 0 0}
+
+.cta{background:var(--sage-deep);color:#EDF3EF;margin-top:3rem;padding:3rem 0}
+.cta h2{color:#fff;font-size:clamp(1.5rem,3.6vw,2.1rem);max-width:18ch}
+.cta p{color:#D5E2DA;max-width:44ch}
+.btn{display:inline-flex;align-items:center;gap:.6rem;min-height:50px;padding:.8rem 1.5rem;
+  border-radius:999px;text-decoration:none;font-weight:700;font-size:.94rem;
+  background:#25D366;color:#0B2E1B;margin-top:1.4rem}
+.btn svg{width:19px;height:19px;fill:currentColor}
+footer{background:var(--ink);color:#8DA398;font-size:.85rem;padding:2.2rem 0}
+footer a{color:#B7C7BE}
+
+.lb{position:fixed;inset:0;background:rgba(9,18,24,.94);display:none;place-items:center;z-index:90;padding:1rem}
+.lb.open{display:grid}
+.lb img{max-width:94vw;max-height:80vh;border-radius:10px}
+.lb figcaption{color:#B7C7BE;font-size:.85rem;text-align:center;margin-top:.9rem;max-width:60ch}
+.lb button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;
+  width:46px;height:46px;border-radius:50%;font-size:1.4rem;cursor:pointer}
+.lb .x{top:1rem;right:1rem} .lb .p{left:1rem;top:50%} .lb .n{right:1rem;top:50%}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="sweep" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="eyebrow">Galeri kegiatan</p>
+    <h1>Klinik Inseminasi dan pelatihan <em>bedah robotik</em></h1>
+    <p>Dokumentasi kegiatan dr. Danny Wiguna, Sp.OG — peresmian Klinik Inseminasi Siloam Hospitals Yogyakarta dan pelatihan teknologi bedah terbaru.</p>
+    <a class="back" href="../">&larr; Kembali ke halaman utama</a>
+  </div>
+</header>
+
+<main class="gal">
+  <div class="wrap viewport">
+    <button class="nav prev" aria-label="Foto sebelumnya">&lsaquo;</button>
+    <div class="track" id="track">
+        <figure class="slide">
+          <img src="assets/galeri-001.jpg" alt="Grand Launching Klinik Inseminasi Siloam Hospitals Yogyakarta" loading="lazy">
+          <figcaption>Grand Launching Klinik Inseminasi Siloam Hospitals Yogyakarta</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="assets/galeri-002.jpg" alt="dr. Danny Wiguna, Sp.OG di Klinik Inseminasi Siloam Hospitals Yogyakarta" loading="lazy">
+          <figcaption>dr. Danny Wiguna, Sp.OG di Klinik Inseminasi Siloam Hospitals Yogyakarta</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="assets/galeri-003.jpg" alt="Peresmian Klinik Inseminasi Siloam Hospitals Yogyakarta, Mei 2025" loading="lazy">
+          <figcaption>Peresmian Klinik Inseminasi Siloam Hospitals Yogyakarta, Mei 2025</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="assets/galeri-004.jpg" alt="dr. Danny Wiguna, Sp.OG pada hari peresmian Klinik Inseminasi" loading="lazy">
+          <figcaption>dr. Danny Wiguna, Sp.OG pada hari peresmian Klinik Inseminasi</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="assets/galeri-005.jpg" alt="Workshop robotic surgery bersama Kemenkes dan RSU Bunda Jakarta" loading="lazy">
+          <figcaption>Workshop robotic surgery bersama Kemenkes dan RSU Bunda Jakarta</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="assets/galeri-006.jpg" alt="Pelatihan sistem bedah robotik" loading="lazy">
+          <figcaption>Pelatihan sistem bedah robotik</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="assets/galeri-007.jpg" alt="Sesi konsol bedah robotik dalam workshop" loading="lazy">
+          <figcaption>Sesi konsol bedah robotik dalam workshop</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="assets/galeri-008.jpg" alt="Konsol dan monitor sistem bedah robotik" loading="lazy">
+          <figcaption>Konsol dan monitor sistem bedah robotik</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="assets/galeri-009.jpg" alt="Lengan robotik pada meja simulasi bedah" loading="lazy">
+          <figcaption>Lengan robotik pada meja simulasi bedah</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="assets/galeri-010.jpg" alt="Simulasi tindakan dengan lengan robotik" loading="lazy">
+          <figcaption>Simulasi tindakan dengan lengan robotik</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="assets/galeri-011.jpg" alt="Instrumen lengan robotik dari dekat" loading="lazy">
+          <figcaption>Instrumen lengan robotik dari dekat</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="assets/galeri-012.jpg" alt="Latihan ketangkasan instrumen bedah robotik" loading="lazy">
+          <figcaption>Latihan ketangkasan instrumen bedah robotik</figcaption>
+        </figure>
+    </div>
+    <button class="nav next" aria-label="Foto berikutnya">&rsaquo;</button>
+    <p class="hint">Geser atau ketuk panah &middot; ketuk foto untuk memperbesar</p>
+  </div>
+</main>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Ingin berkonsultasi?</h2>
+    <p>Kirim pesan untuk menanyakan jadwal praktik dan membuat janji.</p>
+    <a class="btn" href="https://wa.me/6281227911968?text=Halo%20Dokter%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884a9.82 9.82 0 0 1 6.988 2.896 9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.945c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.882 11.882 0 0 0 5.683 1.448h.005c6.585 0 11.946-5.359 11.949-11.945a11.87 11.87 0 0 0-3.497-8.411"/></svg>
+      Konsultasi via WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p style="margin:0">dr. Danny Wiguna, Sp.OG &middot; Siloam Hospitals Yogyakarta &middot;
+      <a href="../">drdannywigunaspog.com</a></p>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto diperbesar">
+  <button class="x" aria-label="Tutup">&times;</button>
+  <button class="p" aria-label="Sebelumnya">&lsaquo;</button>
+  <button class="n" aria-label="Berikutnya">&rsaquo;</button>
+  <figure style="margin:0;text-align:center">
+    <img id="lbimg" src="" alt="">
+    <figcaption id="lbcap"></figcaption>
+  </figure>
+</div>
+
+<script>
+(function(){
+  var track=document.getElementById('track');
+  var slides=[].slice.call(track.querySelectorAll('.slide'));
+  document.querySelector('.nav.prev').onclick=function(){track.scrollBy({left:-track.clientWidth*0.8,behavior:'smooth'});};
+  document.querySelector('.nav.next').onclick=function(){track.scrollBy({left: track.clientWidth*0.8,behavior:'smooth'});};
+
+  var lb=document.getElementById('lb'), img=document.getElementById('lbimg'), cap=document.getElementById('lbcap'), idx=0;
+  function show(i){
+    idx=(i+slides.length)%slides.length;
+    var s=slides[idx].querySelector('img');
+    img.src=s.src; img.alt=s.alt; cap.textContent=s.alt;
+  }
+  slides.forEach(function(s,i){ s.onclick=function(){ show(i); lb.classList.add('open'); }; });
+  lb.querySelector('.x').onclick=function(){lb.classList.remove('open');};
+  lb.querySelector('.p').onclick=function(e){e.stopPropagation();show(idx-1);};
+  lb.querySelector('.n').onclick=function(e){e.stopPropagation();show(idx+1);};
+  lb.onclick=function(e){ if(e.target===lb) lb.classList.remove('open'); };
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')lb.classList.remove('open');
+    if(e.key==='ArrowLeft')show(idx-1);
+    if(e.key==='ArrowRight')show(idx+1);
+  });
+})();
+</script>
+</body>
+</html>
